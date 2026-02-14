@@ -99,7 +99,7 @@ const HomeFeatureSection = () => {
             Core Features
           </Badge>
 
-          <h2 className="mt-6 text-4xl sm:text-5xl lg:text-5xl font-bold tracking-tight">
+          <h2 className="mt-6 text-2xl sm:text-5xl lg:text-5xl font-bold tracking-tight">
             Powerful Tools Built for <br />
             <span className="text-primary">Real Humanitarian Work</span>
           </h2>

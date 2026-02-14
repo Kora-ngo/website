@@ -22,7 +22,7 @@ const staggerContainer = {
 const HomeProblemSection = () => {
   return (
     <section className="py-20 bg-gray-50">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left column – Text / Problem description – unchanged */}
           <div className="space-y-8">
@@ -46,7 +46,7 @@ const HomeProblemSection = () => {
               >
                 Real Problem. Real Impact
               </Badge>
-              <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold leading-tight tracking-tight">
+              <h2 className="text-2xl sm:text-2xl lg:text-4xl font-bold leading-tight tracking-tight">
                 When Structure Is Missing, <br /> Accountability Suffers
               </h2>
             </div>
@@ -57,7 +57,7 @@ const HomeProblemSection = () => {
               areas.
             </p>
 
-            <ul className="space-y-1 text-gray-700 text-lg">
+            <ul className="space-y-1 hidden lg:block text-gray-700 text-lg">
               <li className="flex items-start gap-4">
                 <span className="text-primary text-2xl font-bold mt-1">•</span>
                 <span>Poor offline support leads to delayed or lost records</span>
@@ -102,7 +102,7 @@ const HomeProblemSection = () => {
                     <h4 className="font-semibold text-gray-900">Enass M.</h4>
                     <span className="text-sm text-gray-500">Field Coordinator, NGO</span>
                   </div>
-                  <p className="mt-1.5 text-gray-700 leading-relaxed">
+                  <p className="mt-1.5 text-gray-700 text-xs lg:text-[16px] leading-relaxed">
                     "When there’s no signal, we go back to paper. Later we re-enter everything… and sometimes we’re not even
                     sure who actually received the aid."
                   </p>
@@ -113,7 +113,7 @@ const HomeProblemSection = () => {
               <motion.div
                 variants={fadeUpVariants}
                 transition={{ duration: 0.7, ease: "easeOut" }}
-                className="flex items-start gap-4 bg-white p-5 shadow-lg border-l-4 border-l-primary transform translate-x-16 hover:-translate-y-1 transition-transform duration-300"
+                className="flex items-start gap-4 bg-white p-5 shadow-lg border-l-4 border-l-primary transform translate-x-4 lg:translate-x-16 hover:-translate-y-1 transition-transform duration-300"
               >
                 <img
                   src="https://thumbs.dreamstime.com/b/happy-man-portrait-park-volunteer-eco-friendly-development-global-change-nature-male-person-activist-ngo-smile-418570548.jpg"
@@ -125,7 +125,7 @@ const HomeProblemSection = () => {
                     <h4 className="font-semibold text-gray-900">Ahmed K.</h4>
                     <span className="text-sm text-gray-500">Community Mobilizer</span>
                   </div>
-                  <p className="mt-1.5 text-gray-700 leading-relaxed">
+                  <p className="mt-1.5 text-gray-700 text-xs lg:text-[16px] leading-relaxed">
                     "We’ve had the same family registered twice because we couldn’t verify properly. It causes tension, and
                     we can’t afford those mistakes."
                   </p>
@@ -148,7 +148,7 @@ const HomeProblemSection = () => {
                     <h4 className="font-semibold text-gray-900">Ibrahim S.</h4>
                     <span className="text-sm text-gray-500">Village Leader</span>
                   </div>
-                  <p className="mt-1.5 text-gray-700 leading-relaxed">
+                  <p className="mt-1.5 text-gray-700 text-xs lg:text-[16px] leading-relaxed">
                     “Donors ask for proof. We try our best... but pulling everything together from notes and spreadsheets is
                     stressful.”
                   </p>

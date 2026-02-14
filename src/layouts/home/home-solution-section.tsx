@@ -8,8 +8,8 @@ const fadeUpVariants = {
 
 const HomeSolutionSection = () => {
   return (
-    <section className="py- bg-linear-to-b from-white to-gray-50 overflow-hidden mb-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="py-10 bg-linear-to-b from-white to-gray-50 overflow-hidden mb-20">
+      <div className="mx-auto max-w-7xl sm:px-6 px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: Circular ecosystem diagram */}
 

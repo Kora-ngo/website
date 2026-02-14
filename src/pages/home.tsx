@@ -1,5 +1,6 @@
 import HomeDownloadSection from "../layouts/home/home-download-section";
 import HomeFeatureSection from "../layouts/home/home-feature-section";
+import HomeFooter from "../layouts/home/home-footer";
 import HomeHeroSection from "../layouts/home/home-hero-section";
 import HomeNavbar from "../layouts/home/home-navbar";
 import HomeProblemSection from "../layouts/home/home-problem-section";
@@ -12,12 +13,13 @@ const Home = () => {
         <div className="min-h-screen bg-white">
             <section><HomeNavbar /> </section>
             <section ><HomeHeroSection /></section>
-            <section className="py-30" ><HomeProblemSection /></section>
+             <section className="lg:py-30" ><HomeProblemSection /></section>
             <section ><HomeSolutionSection /></section>
             <section ><HomeWorkSection /></section>
             <section ><HomeFeatureSection /></section>
-            <section ><HomeWhoSection /></section>
+           <section ><HomeWhoSection /></section>
             <section ><HomeDownloadSection /></section>
+            <section ><HomeFooter /></section>
         </div>
      );
 }

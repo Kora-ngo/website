@@ -21,9 +21,9 @@ const staggerContainer = {
 
 const HomeHeroSection = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen w-full space-y-100 px-4 sm:px-6 lg:px-8 pt-20 pb-32  bg-white">
+    <div className="relative flex flex-col items-center justify-start min-h-screen w-full space-y-0 lg:space-y-100 px-4 sm:px-6 lg:px-8 lg:pt-20 pb-32  bg-white">
       {/* Text content – unchanged */}
-      <div className="z-10 text-center max-w-5xl mx-auto space-y-7 pb-16 md:pb-24 lg:pb-100 mt-14">
+      <div className="z-10 text-center max-w-5xl mx-auto space-y-7 md:pb-24 lg:pb-100 mt-28 lg:mt-14">
         <Badge
           icon={
             <svg
@@ -45,12 +45,12 @@ const HomeHeroSection = () => {
           Build for Field Reality
         </Badge>
 
-        <h1 className="text-5xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
           The <span className="text-primary">Offline-First</span> Beneficiary <br />{" "}
           & Aid Tracking Operating System
         </h1>
 
-        <p className="text-gray-400 text-lg sm:text-xl font-medium max-w-6xl mx-auto px-4 sm:px-0">
+        <p className="text-gray-400 text-sm sm:text-xl font-medium max-w-6xl mx-auto px-4 sm:px-0">
           Kora helps organizations plan, track, and validate aid distribution at the household level.
           From project setup to field delivery, everything is structured, synchronized, and accessible
           with full offline capability for real-world field conditions.
@@ -63,7 +63,7 @@ const HomeHeroSection = () => {
 
           {/* Animated Primary Glow – behind & above the dashboard */}
           <motion.div
-            className="absolute left-1/2 top-[10%] sm:top-[5%] -translate-x-1/2 w-[80%] sm:w-[65%] lg:w-[55%] aspect-5/3 rounded-full pointer-events-none z-0"
+            className="absolute left-1/2 top-[10%] sm:top-[5%] -translate-x-1/2 w-[20%] sm:w-[65%] lg:w-[55%] aspect-5/3 rounded-full pointer-events-none z-0"
             // variants={glowVariants}
             initial="hidden"
             whileInView="visible"
@@ -81,7 +81,7 @@ const HomeHeroSection = () => {
           <motion.img
             src="https://res.cloudinary.com/doqholno8/image/upload/v1770944088/Dashbaord_l0tlez.png"
             alt="Kora Dashboard"
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 max-h-[85%] w-auto object-contain drop-shadow-2xl rounded-xl border border-gray-200 z-10"
+            className="absolute lg:bottom-8 left-1/2 -translate-x-1/2 max-h-[85%] w-80 lg:w-auto object-contain drop-shadow-2xl rounded-xl border border-gray-200 z-10"
             variants={fadeUpVariants}
             initial="hidden"
             whileInView="visible"
@@ -127,33 +127,33 @@ const HomeHeroSection = () => {
 
           {/* Mobile-only stacked cards – unchanged (your latest version with stagger) */}
           <motion.div
-            className="lg:hidden absolute bottom-0 left-0 right-0 flex flex-col items-center gap-6 pb-4"
+            className="lg:hidden absolute bottom-70 left-0 right-0 flex flex-col items-center gap-6 pb-4"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
           >
-            <motion.img
+             <motion.img
               src="https://res.cloudinary.com/doqholno8/image/upload/v1770944106/Frame_36_jy7zqp.png"
               alt="Project Card 1 (mobile)"
-              className="max-w-[85%] sm:max-w-[70%] w-full object-contain drop-shadow-lg rounded-xl border border-gray-200"
+              className="absolute bottom-0 right-0 max-w-[45%] sm:max-w-[70%] w-full object-contain drop-shadow-lg z-10"
               variants={fadeUpVariants}
               transition={{ duration: 0.7, ease: "easeOut" }}
             />
             <motion.img
               src="https://res.cloudinary.com/doqholno8/image/upload/v1770944107/Frame_34_c2qoky.png"
               alt="Alert Card (mobile)"
-              className="max-w-[85%] sm:max-w-[70%] w-full object-contain drop-shadow-lg rounded-xl border border-gray-200"
+              className="absolute top-8 right-10 max-w-[35%] sm:max-w-[70%] w-full object-contain drop-shadow-lg z-10"
               variants={fadeUpVariants}
               transition={{ duration: 0.7, ease: "easeOut" }}
             />
             <motion.img
               src="https://res.cloudinary.com/doqholno8/image/upload/v1770944107/Frame_35_ork0lt.png"
               alt="Sync Card (mobile)"
-              className="max-w-[85%] sm:max-w-[70%] w-full object-contain drop-shadow-lg rounded-xl border border-gray-200"
+              className="absolute top-8 right-46  max-w-[35%] sm:max-w-[70%] w-full object-contain drop-shadow-lg z-10"
               variants={fadeUpVariants}
               transition={{ duration: 0.7, ease: "easeOut" }}
-            />
+            /> 
           </motion.div>
         </div>
       </div>

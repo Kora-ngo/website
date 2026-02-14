@@ -117,7 +117,7 @@ const HomeWorkSection = () => {
             How It Works
           </Badge>
 
-          <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
+          <h2 className="mt-6 text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
             Simple. Reliable. <span className="text-[#747bff]">Field-ready.</span>
           </h2>
 

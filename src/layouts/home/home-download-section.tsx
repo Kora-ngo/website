@@ -36,7 +36,7 @@ const HomeDownloadSection = () => {
               </h2>
 
               <p className="text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0">
-                Take Kora with you into the field — full offline registration, distribution recording, photo & GPS capture, and automatic sync when you're back online.
+                Take Kora with you into the field. Full offline registration, distribution recording, and data synchronization when you're back online.
               </p>
 
               <div className="flex flex-wrap justify-center lg:justify-start gap-6">
@@ -61,7 +61,7 @@ const HomeDownloadSection = () => {
             </div>
 
             {/* Right – Mobile image with glowing background */}
-            <div className="relative pr-10 pt-6 flex justify-center lg:justify-end z-10">
+            <div className="relative pr-10 pt-6 flex justify-start lg:justify-end z-10">
               <div className="relative w-full max-w-md lg:max-w-lg">
                 {/* Glowing background behind the image */}
                 <div
@@ -75,9 +75,9 @@ const HomeDownloadSection = () => {
 
                 {/* The mobile SVG – no padding, touches bottom */}
                 <img
-                  src="https://res.cloudinary.com/doqholno8/image/upload/v1771032363/mobile_i4wx1f.svg"
+                  src="https://res.cloudinary.com/doqholno8/image/upload/v1771033699/mobile_r4kc08.png"
                   alt="Kora Field mobile app"
-                  className="w-100 h-auto object-contain drop-shadow-2xl mt-20 ml-6 relative z-10"
+                  className="w-100 h-auto object-contain drop-shadow-2xl lg:mt-20 ml-5 relative z-10"
                   style={{ marginBottom: "-1px" }} // ensures it touches the bottom edge perfectly
                 />
               </div>
