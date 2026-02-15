@@ -32,3 +32,11 @@ body {
 }
 
 
+/* Prevent any horizontal overflow on mobile */
+html,
+body,
+#root {
+  overflow-x: hidden;
+  width: 100%;
+}
+

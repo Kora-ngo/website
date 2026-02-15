@@ -49,7 +49,7 @@ const HomeHeroSection = () => {
       </div>
 
       {/* Images Container */}
-      <div className="absolute bottom-0 left-0 right-0 h-[45%] sm:h-[55%] lg:h-[70%] pointer-events-none">
+      <div className="absolute bottom-0 left-0 right-0 h-[35%] sm:h-[55%] lg:h-[70%] pointer-events-none">
         <div className="relative w-full h-full max-w-8xl mx-auto">
 
           {/* Animated Primary Glow – behind & above the dashboard */}
@@ -118,7 +118,7 @@ const HomeHeroSection = () => {
 
           {/* Mobile-only stacked cards – unchanged (your latest version with stagger) */}
           <motion.div
-            className="lg:hidden absolute bottom-70 left-0 right-0 flex flex-col items-center gap-6 pb-4"
+            className="lg:hidden absolute bottom-50 left-0 right-0 flex flex-col items-center gap-6 pb-4"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
