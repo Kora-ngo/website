@@ -36,7 +36,7 @@ const HomeHeroSection = () => {
           Impact in Harmony
         </Badge>
 
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
           The <span className="text-primary">Offline-First</span> Beneficiary <br />{" "}
           & Aid Tracking Operating System
         </h1>
@@ -118,7 +118,7 @@ const HomeHeroSection = () => {
 
           {/* Mobile-only stacked cards – unchanged (your latest version with stagger) */}
           <motion.div
-            className="lg:hidden absolute bottom-50 left-0 right-0 flex flex-col items-center gap-6 pb-4"
+            className="lg:hidden absolute bottom-36 left-0 right-0 flex flex-col items-center gap-6 pb-4"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -134,14 +134,14 @@ const HomeHeroSection = () => {
             <motion.img
               src="https://res.cloudinary.com/doqholno8/image/upload/v1770944107/Frame_34_c2qoky.png"
               alt="Alert Card (mobile)"
-              className="absolute top-8 right-10 max-w-[35%] sm:max-w-[70%] w-full object-contain drop-shadow-lg z-10"
+              className="absolute top-8 right-6 max-w-[35%] sm:max-w-[70%] w-full object-contain drop-shadow-lg z-10"
               variants={fadeUpVariants}
               transition={{ duration: 0.7, ease: "easeOut" }}
             />
             <motion.img
               src="https://res.cloudinary.com/doqholno8/image/upload/v1770944107/Frame_35_ork0lt.png"
               alt="Sync Card (mobile)"
-              className="absolute top-8 right-46  max-w-[35%] sm:max-w-[70%] w-full object-contain drop-shadow-lg z-10"
+              className="absolute top-8 right-36  max-w-[35%] sm:max-w-[70%] w-full object-contain drop-shadow-lg z-10"
               variants={fadeUpVariants}
               transition={{ duration: 0.7, ease: "easeOut" }}
             /> 
