@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/space/:path*",
+      "destination": "https://kora-space.vercel.app/:path*"
+    },
+    {
+      "source": "/space",
+      "destination": "https://kora-space.vercel.app"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
