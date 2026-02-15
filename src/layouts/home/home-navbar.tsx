@@ -1,5 +1,6 @@
 import { cn } from '../../utils/cn';
 import logo from "../../assets/logo.svg";
+import { useEffect, useState } from 'react';
 
 const navLinks = [
   { label: 'Problem', href: '#problem' },
@@ -10,34 +11,53 @@ const navLinks = [
 ];
 
 const HomeNavbar = () => {
+  const [activeSection, setActiveSection] = useState<string>('');
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.3, rootMargin: '-80px 0px -40% 0px' } // adjust to taste
+    );
+
+    document.querySelectorAll('section[id]').forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <nav
-      className={cn(
-        'fixed left-0 right-0 z-50',
-        'backdrop-blur-md bg-white/70 border-gray-200/70',
-      )}
-    >
+    <nav className={cn('fixed left-0 right-0 z-50 backdrop-blur-md bg-white/70 border-gray-200/70')}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/" className="flex items-center gap-2">
-              <div
-                className="flex items-center space-x-2"
-              >
+              <div className="flex items-center space-x-2">
                 <img src={logo} alt="" className="size-12" />
                 <p className="text-3xl text-primary font-semibold">Kora</p>
               </div>
             </a>
           </div>
 
-          {/* Navigation links – centered */}
+          {/* Navigation links – centered with active state */}
           <div className="hidden md:flex md:items-center md:gap-8 lg:gap-10">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                className={cn(
+                  'text-sm font-medium transition-colors',
+                  activeSection === link.href.slice(1)
+                    ? 'text-primary font-semibold underline underline-offset-4'
+                    : 'text-gray-700 hover:text-primary'
+                )}
               >
                 {link.label}
               </a>
@@ -46,7 +66,8 @@ const HomeNavbar = () => {
 
           {/* CTA */}
           <div className="flex items-center gap-4">
-            <button
+            <a
+              href="https://kora.onl/space"
               className={cn(
                 'px-5 py-2 text-sm font-semibold rounded-xl',
                 'bg-primary text-white',
@@ -55,7 +76,7 @@ const HomeNavbar = () => {
               )}
             >
               Get Started
-            </button>
+            </a>
 
             {/* Mobile menu button */}
             <button className="md:hidden text-gray-700 hover:text-primary">

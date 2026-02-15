@@ -123,7 +123,7 @@ const HomeWhoSection = () => {
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-gray-50 aspect-[4/5] lg:aspect-[3/4] max-w-lg mx-auto lg:mx-0">
               {/* Replace this src with your actual image */}
               <img
-                src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=2400"
+                src="https://res.cloudinary.com/doqholno8/image/upload/v1771070941/freepik__group-of-black-african-people-receiving-ngo-food-a__44262_owxour.png"
                 alt="Humanitarian workers distributing aid in the field"
                 className="w-full h-full object-cover"
               />

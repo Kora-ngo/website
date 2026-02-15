@@ -39,25 +39,32 @@ const HomeDownloadSection = () => {
                 Take Kora with you into the field. Full offline registration, distribution recording, and data synchronization when you're back online.
               </p>
 
-              <div className="flex flex-wrap justify-center lg:justify-start gap-6">
-                {/* Google Play button – only one for now as per your code */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-6 pt-6">
+                {/* Download APK button */}
                 <a
-                  href="#"
-                  className="inline-flex items-center gap-3 rounded-xl bg-black px-6 py-4 text-white hover:bg-gray-900 transition-colors shadow-lg"
+                  href="https://webapp.diawi.com/install/y2TGqS"  // ← Replace with your actual APK download link (e.g. "/downloads/kora-field-latest.apk" or external secure URL)
+                  download="Kora-Field.apk"
+                  className="inline-flex items-center gap-3 rounded-xl bg-[#747bff] px-7 py-4.5 text-white hover:bg-[#6366f1] transition-all duration-300 shadow-lg shadow-[#747bff]/30 hover:shadow-[#747bff]/50 hover:scale-[1.02] active:scale-95"
                 >
-                  <svg className="size-8" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="size-7"
+                  >
+                    <path d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zM3 15.75a.75.75 0 01.75.75v3a2.25 2.25 0 002.25 2.25h12a2.25 2.25 0 002.25-2.25v-3a.75.75 0 011.5 0v3a3.75 3.75 0 01-3.75 3.75h-12A3.75 3.75 0 013 19.5v-3a.75.75 0 01.75-.75z" />
                   </svg>
                   <div className="text-left">
-                    <div className="text-xs">GET IT ON</div>
-                    <div className="text-lg font-semibold">Google Play</div>
+                    <div className="text-xs opacity-90">Download</div>
+                    <div className="text-lg font-semibold">Kora Field APK</div>
                   </div>
                 </a>
-              </div>
 
-              <p className="text-sm text-gray-400 ">
-                Available for Android (iOS coming soon) • Free download
-              </p>
+                {/* Optional small trust note */}
+                <p className="text-sm text-gray-400 self-center lg:self-start">
+                  Android only • v1.0.0 • Secure & virus-free
+                </p>
+              </div>
             </div>
 
             {/* Right – Mobile image with glowing background */}

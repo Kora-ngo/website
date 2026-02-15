@@ -1,7 +1,7 @@
 
 const HomeFooter = () => {
   const navLinks = [
-    { name: "Home", href: "/" },
+    // { name: "Home", href: "/" },
     { name: "Problem", href: "#problem" },
     { name: "Solution", href: "#solution" },
     { name: "How It Works", href: "#how-it-works" },
@@ -12,7 +12,7 @@ const HomeFooter = () => {
   const legalLinks = [
     { name: "Privacy Policy", href: "/privacy" },
     { name: "Terms of Service", href: "/terms" },
-    { name: "Contact Us", href: "/contact" },
+    { name: "Contact Us", href: "mailto:denzetchaptche@gmail.com" }
   ];
 
   return (
@@ -85,37 +85,79 @@ const HomeFooter = () => {
                   </a>
                 </li>
               ))}
-              <li>
+              {/* <li>
                 <a
                   href="mailto:support@kora.app"
                   className="text-gray-400 hover:text-[#747bff] transition-colors"
                 >
                   support@kora.app
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
           {/* Newsletter / Quick contact */}
-          <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Stay Updated</h3>
-            <p className="text-gray-400 mb-4">
-              Subscribe for updates, new features, and humanitarian impact stories.
+          {/* <div>
+            <h3 className="text-white font-semibold text-lg mb-6">Join the Movement</h3>
+            <p className="text-gray-400 mb-5 leading-relaxed">
+              Be among the first to access Kora Field, receive early invites, and help shape the future of transparent, offline-first aid delivery.
             </p>
-            <form className="flex flex-col gap-3">
+
+            <form className="flex flex-col gap-4">
               <input
                 type="email"
-                placeholder="Your email"
-                className="bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#747bff] transition-colors"
+                placeholder="Your work email"
+                required
+                className="bg-gray-900 border border-gray-700 rounded-lg px-5 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-[#747bff] focus:ring-1 focus:ring-[#747bff]/40 transition-all"
               />
               <button
                 type="submit"
-                className="bg-[#747bff] text-white font-medium py-3 px-6 rounded-lg hover:bg-[#6366f1] transition-colors"
+                className="bg-[#747bff] text-white font-medium py-3.5 px-8 rounded-lg hover:bg-[#6366f1] active:bg-[#5a5ee6] transition-all shadow-md hover:shadow-lg hover:shadow-[#747bff]/30"
               >
-                Subscribe
+                Get Early Access
               </button>
             </form>
-          </div>
+
+            <p className="text-xs text-gray-500 mt-5">
+              We respect your privacy — no spam, ever. Only meaningful updates.
+            </p>
+          </div> */}
+
+          <div>
+  <h3 className="text-white font-semibold text-lg mb-6">Ready to Transform Aid Delivery?</h3>
+  
+  {/* <p className="text-gray-400 mb-6 leading-relaxed">
+    Kora is built from real field experience to bring structure, transparency, and offline reliability to humanitarian operations. We're actively working with early partners to refine and scale the platform.
+  </p> */}
+
+  <div className="space-y-4 text-sm">
+    <div className="flex items-start gap-3 text-gray-300">
+      <svg className="size-5 text-[#747bff] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.707 8.707a1 1 0 011.414 0L9 11.586l5.293-5.293a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+      </svg>
+      <span>Offline-first mobile app already in active field testing</span>
+    </div>
+    
+    <div className="flex items-start gap-3 text-gray-300">
+      <svg className="size-5 text-[#747bff] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.707 8.707a1 1 0 011.414 0L9 11.586l5.293-5.293a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+      </svg>
+      <span>Household-level tracking with a flexible verifcation mechanism</span>
+    </div>
+    
+    <div className="flex items-start gap-3 text-gray-300">
+      <svg className="size-5 text-[#747bff] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.707 8.707a1 1 0 011.414 0L9 11.586l5.293-5.293a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+      </svg>
+      <span>Designed by people who’ve worked in the field</span>
+    </div>
+  </div>
+
+  <p className="text-sm text-gray-500 mt-8 italic">
+    “Structure where there was chaos. Proof where there was doubt.”
+  </p>
+</div>
+
         </div>
 
         {/* Bottom bar */}

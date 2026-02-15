@@ -11,15 +11,41 @@ import HomeWorkSection from "../layouts/home/home-work-section";
 const Home = () => {
     return ( 
         <div className="min-h-screen bg-white">
-            <section><HomeNavbar /> </section>
-            <section ><HomeHeroSection /></section>
-             <section className="lg:py-30" ><HomeProblemSection /></section>
-            <section ><HomeSolutionSection /></section>
-            <section ><HomeWorkSection /></section>
-            <section ><HomeFeatureSection /></section>
-           <section ><HomeWhoSection /></section>
-            <section ><HomeDownloadSection /></section>
-            <section ><HomeFooter /></section>
+        <section>
+            <HomeNavbar />
+        </section>
+
+        <section id="hero">
+            <HomeHeroSection />
+        </section>
+
+        <section id="problem" className="lg:py-30">
+            <HomeProblemSection />
+        </section>
+
+        <section id="solution">
+            <HomeSolutionSection />
+        </section>
+
+        <section id="how-it-works">
+            <HomeWorkSection />
+        </section>
+
+        <section id="features">
+            <HomeFeatureSection />
+        </section>
+
+        <section id="audience">
+            <HomeWhoSection />
+        </section>
+
+        <section id="download">
+            <HomeDownloadSection />
+        </section>
+
+        <section id="footer">
+            <HomeFooter />
+        </section>
         </div>
      );
 }
