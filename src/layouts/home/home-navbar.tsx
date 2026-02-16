@@ -40,8 +40,8 @@ const HomeNavbar = () => {
           <div className="flex-shrink-0">
             <a href="/" className="flex items-center gap-2">
               <div className="flex items-center space-x-2">
-                <img src={logo} alt="" className="size-12" />
-                <p className="text-3xl text-primary font-semibold">Kora</p>
+                <img src={logo} alt="" className="lg:size-12 size-9" />
+                <p className="lg:text-3xl text-2xl text-primary font-semibold">Kora</p>
               </div>
             </a>
           </div>

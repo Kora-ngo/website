@@ -42,7 +42,7 @@ const HomeDownloadSection = () => {
               <div className="flex flex-wrap justify-center lg:justify-start gap-6 pt-6">
                 {/* Download APK button */}
                 <a
-                  href="https://webapp.diawi.com/install/y2TGqS"  // ← Replace with your actual APK download link (e.g. "/downloads/kora-field-latest.apk" or external secure URL)
+                  href="https://www.dropbox.com/scl/fi/cunc8p2pz7meb2hpwz8iu/app-release.apk?rlkey=9vuboz3dd9s08n2glegd86nw0&st=rbzgrzu5&dl=0"  // ← Replace with your actual APK download link (e.g. "/downloads/kora-field-latest.apk" or external secure URL)
                   download="Kora-Field.apk"
                   className="inline-flex items-center gap-3 rounded-xl bg-[#747bff] px-7 py-4.5 text-white hover:bg-[#6366f1] transition-all duration-300 shadow-lg shadow-[#747bff]/30 hover:shadow-[#747bff]/50 hover:scale-[1.02] active:scale-95"
                 >
