@@ -45,7 +45,7 @@ const HomeNavbar = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <a href="/" className="flex items-center gap-2">
                 <div className="flex items-center space-x-2">
                   <img src={logo} alt="Kora Logo" className="lg:size-12 size-9" />
@@ -79,18 +79,18 @@ const HomeNavbar = () => {
                 href="#demo-request"
                 className={cn(
                   'group relative inline-flex items-center justify-center overflow-hidden',
-                  'px-5 py-2 text-sm font-semibold rounded-xl min-w-[140px]',
-                  'bg-gradient-to-r from-[#747bff] to-[#6366f1]',
+                  'px-5 py-2 text-sm font-semibold rounded-xl min-w-35',
+                  'bg-linear-to-r from-[#595bf1] to-[#f163ea]',
                   'text-white shadow-md shadow-[#747bff]/20',
-                  'hover:from-[#6366f1] hover:to-[#4f46e5]',
-                  'hover:shadow-lg hover:shadow-[#747bff]/40 hover:min-w-[170px]',
+                  'from-[#595bf1] to-[#f163ea]',
+                  'hover:shadow-lg hover:shadow-[#747bff]/40 hover:min-w-42.5',
                   'transition-all duration-400 ease-out'
                 )}
               >
                 <span
                   className={cn(
                     'transition-all duration-400 ease-out',
-                    'group-hover:translate-x-[-12px]'
+                    'group-hover:-translate-x-3'
                   )}
                 >
                   Request Demo
@@ -191,7 +191,7 @@ const HomeNavbar = () => {
               href="#demo-request"
               className={cn(
                 'block text-center py-3 px-6 rounded-xl font-semibold',
-                'bg-gradient-to-r from-[#747bff] to-[#6366f1]',
+                'bg-linear-to-r from-[#747bff] to-[#6366f1]',
                 'text-white shadow-md hover:shadow-lg hover:shadow-[#747bff]/40',
                 'transition-all duration-300'
               )}
