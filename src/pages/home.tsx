@@ -1,3 +1,4 @@
+import HomeDemoRequestSection from "../layouts/home/home-demo-section";
 import HomeDownloadSection from "../layouts/home/home-download-section";
 import HomeFeatureSection from "../layouts/home/home-feature-section";
 import HomeFooter from "../layouts/home/home-footer";
@@ -37,6 +38,10 @@ const Home = () => {
 
         <section id="audience">
             <HomeWhoSection />
+        </section>
+
+        <section id="demo-request" className="scroll-mt-20">
+            <HomeDemoRequestSection />
         </section>
 
         <section id="download">

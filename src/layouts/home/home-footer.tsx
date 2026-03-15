@@ -59,9 +59,9 @@ const HomeFooter = () => {
           </div>
 
           {/* Navigation */}
-          <div>
+          <div className="hidden md:block">
             <h3 className="text-white font-semibold text-lg mb-6">Navigation</h3>
-            <ul className="space-y-4">
+            <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <a
@@ -78,7 +78,7 @@ const HomeFooter = () => {
           {/* Legal & Support */}
           <div>
             <h3 className="text-white font-semibold text-lg mb-6">Legal & Support</h3>
-            <ul className="space-y-4">
+            <ul className="space-y-2">
               {legalLinks.map((link) => (
                 <li key={link.name}>
                   <a
@@ -95,27 +95,27 @@ const HomeFooter = () => {
           {/* Founder / Contact – Professional & Direct */}
           <div>
             <h3 className="text-white font-semibold text-lg mb-6">Contact</h3>
-            <div className="space-y-4 text-sm text-gray-300">
+            <div className="space-y-2 text-sm text-gray-300">
               {/* <p>
                 Built and maintained by Denzel Chaptche<br />
                 <span className="text-gray-400">Founder & Lead Developer</span>
               </p> */}
 
               <div className="space-y-2">
-                <a
+                {/* <a
                   href="https://denzel-labs.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-gray-400 hover:text-[#747bff] transition-colors"
                 >
                   About the Founder
-                </a>
+                </a> */}
 
                 <a
-                  href="mailto:denzetchaptche@gmail.com"
+                  href="mailto:hello@kora.onl"
                   className="block text-gray-400 hover:text-[#747bff] transition-colors"
                 >
-                  denzetchaptche@gmail.com
+                  hello@kora.onl
                 </a>
 
                 {/* Replace with your actual number – remove if you prefer not to show it publicly */}

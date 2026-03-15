@@ -87,8 +87,12 @@ const HomeSolutionSection = () => {
                 >
                     <div className="absolute inset-0 bg-linear-to-br from-blue-400 to-primary rounded-full blur-xl opacity-30 scale-150" />
                     
-                    <div className="relative bg-linear-to-br from-blue-500 to-primary rounded-full py-8 shadow-2xl">
-                        <img src="https://res.cloudinary.com/doqholno8/image/upload/v1771016666/white_logo_cbf8ki.png" className="size-12 ml-7 mr-9" />
+                    <div className="flex justify-center items-center bg-gradient-to-br from-blue-500 to-primary rounded-full h-20 w-20 md:h-32 md:w-32 shadow-2xl transition-all duration-300">
+                        <img
+                            src="https://res.cloudinary.com/doqholno8/image/upload/v1771016666/white_logo_cbf8ki.png"
+                            className="size-10 md:size-16 ml-5 md:ml-7 mr-7 md:mr-9 z-10"
+                            alt="Kora Logo"
+                        />
                     </div>
                 </motion.div>
                 </div>
@@ -127,7 +131,7 @@ const HomeSolutionSection = () => {
                     label: "Offline Field Mode",
                     angle: 120,
                     delay: 0.5,
-                    color: "from-indigo-500 to-indigo-600",
+                    color: "from-yellow-500 to-yellow-600",
                 },
                 {
                     icon: (
@@ -164,7 +168,7 @@ const HomeSolutionSection = () => {
                     label: "Transperent Reporting",
                     angle: 300,
                     delay: 0.8,
-                    color: "from-blue-500 to-blue-600",
+                    color: "from-blue-400 to-blue-500",
                 },
                 ].map((item, i) => {
                 // Calculate position on circle - using 40% of container for proper spacing

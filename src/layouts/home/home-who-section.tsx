@@ -15,7 +15,7 @@ const HomeWhoSection = () => {
     {
       title: "Humanitarian NGOs & INGOs",
       description:
-        "International and national organizations delivering food, cash, WASH, health, protection, or emergency assistance at scale — particularly in remote, low-connectivity, or conflict-affected regions.",
+        "International and national organizations delivering food, cash, WASH, health, protection, or emergency assistance at scale particularly in remote, low-connectivity, or conflict-affected regions.",
     },
     // {
     //   title: "UN Agencies & Cluster Coordinators",
