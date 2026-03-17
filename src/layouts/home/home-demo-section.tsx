@@ -80,7 +80,7 @@ const HomeDemoRequestSection = () => {
           </h2>
 
           <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
-            Book a free 20-minute live demo with our team to explore how Kora can solve your field data challenges — offline tracking, verification, reporting, and more.
+            Book a free 20-minute live demo with our team to explore how Kora can solve your field data challenges.
           </p>
         </div>
 
@@ -101,11 +101,11 @@ const HomeDemoRequestSection = () => {
             <ul className="space-y-5 text-lg text-gray-700">
               <li className="flex items-start gap-4">
                 <span className="text-primary text-2xl font-bold mt-1">•</span>
-                <span>Full offline workflow — register beneficiaries and record deliveries with no internet</span>
+                <span>Full offline workflow. Register beneficiaries and record deliveries with no internet</span>
               </li>
               <li className="flex items-start gap-4">
                 <span className="text-primary text-2xl font-bold mt-1">•</span>
-                <span>Sync triggered when you're ready — data uploads instantly to the central dashboard</span>
+                <span>Sync triggered when you're ready. Data uploads instantly to the central dashboard</span>
               </li>
               <li className="flex items-start gap-4">
                 <span className="text-primary text-2xl font-bold mt-1">•</span>
