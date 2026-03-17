@@ -239,13 +239,17 @@ const HomeDemoRequestSection = () => {
                         className="w-full bg-primary text-white font-semibold py-4 px-8 rounded-xl hover:bg-primary/90 active:bg-primary/80 transition-all shadow-lg hover:shadow-xl disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                       >
                         {loading ? (
-                          <>
-                            <svg className="animate-spin size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
-                            </svg>
-                            Sending…
-                          </>
+                          <div className="flex items-center gap-3">
+                            <div className="relative size-5">
+                              {/* Rotating gradient ring */}
+                              <div className="absolute inset-0 rounded-full bg-linear-to-r from-white via-purple-500 to-white animate-spin [animation-duration:1.4s]" />
+                              {/* Inner mask for ring effect */}
+                              <div className="absolute inset-0.5 rounded-full bg-primary" />
+                              {/* Center pulse */}
+                              <div className="absolute inset-1 rounded-full bg-linear-to-br from-gray-400/40 to-purple-500/40 animate-pulse" />
+                            </div>
+                            <span>Sending…</span>
+                          </div>
                         ) : (
                           <>
                             Request Demo
