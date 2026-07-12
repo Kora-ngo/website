@@ -1,24 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot, hydrateRoot  } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+// src/main.tsx
+import { ViteReactSSG } from 'vite-react-ssg'
 import ReactGA from 'react-ga4'
+import { routes } from './routes'
+import './index.css'
 
-ReactGA.initialize("G-L5DS0KW5N9")
-
-const rootElement = document.getElementById('root')!
-
-if (rootElement.hasChildNodes()) {
-  hydrateRoot(
-    rootElement,
-    <StrictMode>
-      <App />
-    </StrictMode>
-  )
-} else {
-  createRoot(rootElement).render(
-    <StrictMode>
-      <App />
-    </StrictMode>
-  )
+if (typeof window !== 'undefined') {
+  ReactGA.initialize('G-L5DS0KW5N9')
 }
+
+export const createRoot = ViteReactSSG(
+  { routes, basename: import.meta.env.BASE_URL }
+)
