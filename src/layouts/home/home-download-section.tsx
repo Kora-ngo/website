@@ -42,7 +42,7 @@ const HomeDownloadSection = () => {
               <div className="flex flex-wrap justify-center lg:justify-start gap-6 pt-6">
                 {/* Download APK button */}
                 <a
-                  href="https://www.dropbox.com/scl/fi/krk0195odw15mh95a6x0s/app-release.apk?rlkey=sbvxgwu4arawduu6a8cuulibe&st=14xe8q5b&dl=0" 
+                  href="https://appdistribution.firebase.dev/i/bb32de04fc79f8fd" 
                   download="Kora-Field.apk"
                   className="inline-flex items-center gap-3 rounded-xl bg-[#747bff] px-7 py-4.5 text-white hover:bg-[#6366f1] transition-all duration-300 shadow-lg shadow-[#747bff]/30 hover:shadow-[#747bff]/50 hover:scale-[1.02] active:scale-95"
                 >

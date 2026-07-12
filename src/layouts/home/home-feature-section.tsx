@@ -7,10 +7,6 @@ import delImg from "../../assets/icons/inbox.png";
 import syncImg from "../../assets/icons/upload.png";
 import tagImg from "../../assets/icons/tags.png";
 
-
-
-
-// Animation variants
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 60 },
   visible: { opacity: 1, y: 0 },
@@ -30,51 +26,37 @@ const staggerContainer = {
 const HomeFeatureSection = () => {
   const features = [
     {
-      icon: (
-        <img src={phoneImg} className="size-14"></img>
-      ),
+      icon: <img src={phoneImg} alt="Offline mobile data collection icon" className="size-14" />,
       title: "Offline-First Tracking",
       description:
-        "Field teams with thier mobile device can register beneficiaries and record distributions without internet connection, then syncs data once online.",
+        "Field teams can register beneficiaries and record distributions on their mobile device without an internet connection, then sync data automatically once back online.",
     },
     {
-      icon: (
-        <img src={dbImg}  className="size-14"></img>
-
-      ),
+      icon: <img src={dbImg} alt="Centralized beneficiary database icon" className="size-14" />,
       title: "Centralized Beneficiary Management",
       description:
-        "All household data in one place, eliminating duplicate registrations and confusion.",
+        "All household data lives in one place, eliminating duplicate registrations and confusion.",
     },
     {
-      icon: (
-        <img src={teamImg}  className="size-14"></img>
-      ),
+      icon: <img src={teamImg} alt="Project and field team management icon" className="size-14" />,
       title: "Project & Field Team Management",
       description:
         "Create projects, assign collaborators and enumerators, and track progress in real-time.",
     },
     {
-      icon: (
-        <img src={delImg}  className="size-14"></img>
-      ),
+      icon: <img src={delImg} alt="Delivery validation and audit icon" className="size-14" />,
       title: "Delivery Validation & Audit",
       description:
         "Every delivery is logged, reviewed, and approved to ensure accountability and transparency.",
     },
     {
-      icon: (
-        <img src={syncImg}  className="size-14"></img>
-      ),
+      icon: <img src={syncImg} alt="Real-time data sync icon" className="size-14" />,
       title: "Real-Time Sync with Oversight",
       description:
         "Field updates reach collaborators and admins quickly, allowing timely monitoring and reports.",
     },
     {
-      icon: (
-        <img src={tagImg}  className="size-14"></img>
-
-      ),
+      icon: <img src={tagImg} alt="Flexible aid type configuration icon" className="size-14" />,
       title: "Flexible Aid/Assistance Setup",
       description:
         "Define different types of assistance (cash, food, medicine) and attach them to specific projects for clear distribution.",
@@ -93,19 +75,18 @@ const HomeFeatureSection = () => {
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
               <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clipRule="evenodd" />
             </svg>
-
             }
           >
             Core Features
           </Badge>
 
           <h2 className="mt-6 text-2xl sm:text-5xl lg:text-5xl font-bold tracking-tight">
-            Powerful Tools Built for <br />
+            Powerful Tool Built for <br />
             <span className="text-primary">Real Humanitarian Work</span>
           </h2>
 
           <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
-            Every feature is designed to solve real field challenges, from no connectivity to donor accountability.
+            Every feature is designed to solve real field challenges from no connectivity to donor accountability.
           </p>
         </div>
 

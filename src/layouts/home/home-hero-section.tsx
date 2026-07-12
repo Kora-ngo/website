@@ -41,21 +41,19 @@ const HomeHeroSection = () => {
           & Aid Tracking Operating System
         </h1>
 
-        <p className="text-gray-400 text-sm sm:text-xl font-medium max-w-6xl mx-auto px-4 sm:px-0">
-          Kora helps organizations plan, track, and validate aid distribution at the household level.
-          From project setup to field delivery, everything is structured, synchronized, and accessible
-          with full offline capability for real-world field conditions.
+        <p className="text-gray-500 text-sm sm:text-xl font-medium max-w-6xl mx-auto px-4 sm:px-0">
+          Kora is a SaaS platform that helps NGOs and humanitarian organizations
+          register beneficiaries, validate aid delivery, and report to donors,
+          all with full offline support built for real-world field conditions.
         </p>
       </div>
 
-      {/* Images Container */}
+  {/* Images Container */}
       <div className="absolute bottom-0 left-0 right-0 h-[35%] sm:h-[55%] lg:h-[70%] pointer-events-none">
         <div className="relative w-full h-full max-w-8xl mx-auto">
 
-          {/* Animated Primary Glow – behind & above the dashboard */}
           <motion.div
             className="absolute left-1/2 top-[10%] sm:top-[5%] -translate-x-1/2 w-[20%] sm:w-[65%] lg:w-[55%] aspect-5/3 rounded-full pointer-events-none z-0"
-            // variants={glowVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -68,10 +66,13 @@ const HomeHeroSection = () => {
             }}
           />
 
-          {/* Main Dashboard */}
+          {/* Main Dashboard — LCP element: priority load + real dimensions + descriptive alt */}
           <motion.img
             src="https://res.cloudinary.com/doqholno8/image/upload/v1770944088/Dashbaord_l0tlez.png"
-            alt="Kora Dashboard"
+            alt="Kora dashboard showing NGO beneficiary registration and aid delivery approval workflow"
+            width={1200}
+            height={800}
+            fetchPriority="high"
             className="absolute lg:bottom-8 left-1/2 -translate-x-1/2 max-h-[85%] w-80 lg:w-auto object-contain drop-shadow-2xl rounded-xl border border-gray-200 z-10"
             variants={fadeUpVariants}
             initial="hidden"
@@ -80,11 +81,11 @@ const HomeHeroSection = () => {
             transition={{ duration: 0.9, ease: "easeOut" }}
           />
 
-          {/* Desktop/tablet overlapping cards – unchanged */}
           <div className="hidden lg:block">
             <motion.img
               src="https://res.cloudinary.com/doqholno8/image/upload/v1770944106/Frame_36_jy7zqp.png"
-              alt="Dashboard Card - Top Right"
+              alt="Kora project setup screen for assigning collaborators and enumerators"
+              loading="lazy"
               className="absolute bottom-[40%] right-[3%] max-h-[35%] sm:max-h-[40%] w-auto object-contain drop-shadow-xl z-10 rounded-lg size-60"
               variants={fadeUpVariants}
               initial="hidden"
@@ -95,7 +96,8 @@ const HomeHeroSection = () => {
 
             <motion.img
               src="https://res.cloudinary.com/doqholno8/image/upload/v1770944107/Frame_34_c2qoky.png"
-              alt="Dashboard Card - Bottom Right"
+              alt="Kora beneficiary approval alert for field collaborator review"
+              loading="lazy"
               className="absolute bottom-[-6%] right-[6%] w-auto object-contain drop-shadow-xl z-10 rounded-lg size-96"
               variants={fadeUpVariants}
               initial="hidden"
@@ -106,7 +108,8 @@ const HomeHeroSection = () => {
 
             <motion.img
               src="https://res.cloudinary.com/doqholno8/image/upload/v1770944107/Frame_35_ork0lt.png"
-              alt="Dashboard Card - Left of Bottom Right"
+              alt="Kora Field app offline sync status for enumerator data collection"
+              loading="lazy"
               className="absolute bottom-[-6%] right-[43%] w-auto object-contain drop-shadow-xl z-10 rounded-lg size-96"
               variants={fadeUpVariants}
               initial="hidden"
@@ -116,7 +119,6 @@ const HomeHeroSection = () => {
             />
           </div>
 
-          {/* Mobile-only stacked cards – unchanged (your latest version with stagger) */}
           <motion.div
             className="lg:hidden absolute bottom-36 left-0 right-0 flex flex-col items-center gap-6 pb-4"
             variants={staggerContainer}
@@ -126,22 +128,25 @@ const HomeHeroSection = () => {
           >
              <motion.img
               src="https://res.cloudinary.com/doqholno8/image/upload/v1770944106/Frame_36_jy7zqp.png"
-              alt="Project Card 1 (mobile)"
+              alt="Kora project setup screen (mobile view)"
+              loading="lazy"
               className="absolute bottom-0 right-0 max-w-[45%] sm:max-w-[70%] w-full object-contain drop-shadow-lg z-10"
               variants={fadeUpVariants}
               transition={{ duration: 0.7, ease: "easeOut" }}
             />
             <motion.img
               src="https://res.cloudinary.com/doqholno8/image/upload/v1770944107/Frame_34_c2qoky.png"
-              alt="Alert Card (mobile)"
+              alt="Kora beneficiary approval alert (mobile view)"
+              loading="lazy"
               className="absolute top-8 right-6 max-w-[35%] sm:max-w-[70%] w-full object-contain drop-shadow-lg z-10"
               variants={fadeUpVariants}
               transition={{ duration: 0.7, ease: "easeOut" }}
             />
             <motion.img
               src="https://res.cloudinary.com/doqholno8/image/upload/v1770944107/Frame_35_ork0lt.png"
-              alt="Sync Card (mobile)"
-              className="absolute top-8 right-36  max-w-[35%] sm:max-w-[70%] w-full object-contain drop-shadow-lg z-10"
+              alt="Kora Field offline sync status (mobile view)"
+              loading="lazy"
+              className="absolute top-8 right-36 max-w-[35%] sm:max-w-[70%] w-full object-contain drop-shadow-lg z-10"
               variants={fadeUpVariants}
               transition={{ duration: 0.7, ease: "easeOut" }}
             /> 
