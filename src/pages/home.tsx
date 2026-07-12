@@ -56,6 +56,9 @@ const Home = () => {
         <section id="footer">
             <HomeFooter />
         </section>
+
+        {/* done by Morel Denzel */}
+
         </div>
      );
 }
