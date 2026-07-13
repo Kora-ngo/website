@@ -1,13 +1,17 @@
+import { useEffect, useState } from "react";
 import Badge from "../../widgets/badge";
 import { motion } from "framer-motion";
 
-// Reusable fade-up variant
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0 },
 };
 
-// Stagger container for the 3 boxes
+const fadeUpVariantsII = {
+  hidden: { opacity: 0, y: 50, x:60 },
+  visible: { opacity: 1, y: 0, x:60 },
+};
+
 const staggerContainer = {
   hidden: { opacity: 1 },
   visible: {
@@ -19,21 +23,28 @@ const staggerContainer = {
   },
 };
 
-// Simple initials avatar — no real photo, no false attribution
-const InitialsAvatar = ({ initials, bg }: { initials: string; bg: string }) => (
-  <div
-    className={`w-14 h-14 rounded-full flex items-center justify-center shrink-0 border-2 border-primary/30 text-white font-semibold text-lg ${bg}`}
-  >
-    {initials}
-  </div>
-);
+const useIsLargeScreen = () => {
+  const [isLarge, setIsLarge] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    setIsLarge(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsLarge(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  return isLarge;
+};
 
 const HomeProblemSection = () => {
+  const isLargeScreen = useIsLargeScreen();
+
   return (
     <section className="py-20 bg-gray-50">
       <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left column – Text / Problem description – unchanged */}
+          {/* Left column – Text / Problem description */}
           <div className="space-y-8">
             <div className="space-y-2">
               <Badge
@@ -86,76 +97,48 @@ const HomeProblemSection = () => {
             </ul>
           </div>
 
-          {/* Right column – 3 representative field-feedback boxes with scroll animation */}
-          <div className="relative flex justify-center lg:justify-end">
+          {/* Right column – quote-only cards, aligned left */}
+          <div className="w-full flex justify-center lg:justify-end">
             <motion.div
-              className="relative w-full max-w-lg lg:max-w-xl space-y-6 lg:space-y-2"
+              className="w-full max-w-lg lg:max-w-xl space-y-4"
               variants={staggerContainer}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
             >
-              {/* Box 1 */}
               <motion.div
                 variants={fadeUpVariants}
                 transition={{ duration: 0.7, ease: "easeOut" }}
-                className="flex items-start gap-4 bg-white p-5 shadow-lg border-l-4 border-l-primary transform hover:-translate-y-1 transition-transform duration-300"
+                className="bg-white p-5 shadow-lg border-l-4 border-l-primary hover:-translate-y-1 transition-transform duration-300"
               >
-                <InitialsAvatar initials="FC" bg="bg-primary" />
-                <div className="flex-1">
-                  <div className="flex items-baseline gap-3">
-                    <h4 className="font-semibold text-gray-900">Field Coordinator</h4>
-                    <span className="text-sm text-gray-500">NGO, remote region</span>
-                  </div>
-                  <p className="mt-1.5 text-gray-700 text-xs lg:text-[16px] leading-relaxed">
-                    "When there's no signal, we go back to paper. Later we re-enter everything… and sometimes we're not even
-                    sure who actually received the aid."
-                  </p>
-                </div>
+                <p className="text-gray-700 text-sm lg:text-[16px] leading-relaxed">
+                  "When there's no signal, we go back to paper. Later we re-enter everything… and sometimes we're not even
+                  sure who actually received the aid."
+                </p>
               </motion.div>
 
-              {/* Box 2 */}
               <motion.div
-                variants={fadeUpVariants}
+                variants={isLargeScreen ? fadeUpVariantsII : fadeUpVariants}
                 transition={{ duration: 0.7, ease: "easeOut" }}
-                className="flex items-start gap-4 bg-white p-5 shadow-lg border-l-4 border-l-primary transform translate-x-4 lg:translate-x-16 hover:-translate-y-1 transition-transform duration-300"
+                className="bg-white p-5 shadow-lg border-l-4 border-l-primary hover:-translate-y-1 transition-transform duration-300"
               >
-                <InitialsAvatar initials="CM" bg="bg-emerald-500" />
-                <div className="flex-1">
-                  <div className="flex items-baseline gap-3">
-                    <h4 className="font-semibold text-gray-900">Community Mobilizer</h4>
-                    <span className="text-sm text-gray-500">Local response team</span>
-                  </div>
-                  <p className="mt-1.5 text-gray-700 text-xs lg:text-[16px] leading-relaxed">
-                    "We've had the same family registered twice because we couldn't verify properly. It causes tension, and
-                    we can't afford those mistakes."
-                  </p>
-                </div>
+                <p className="text-gray-700 text-sm lg:text-[16px] leading-relaxed">
+                  "We've had the same family registered twice because we couldn't verify properly. It causes tension, and
+                  we can't afford those mistakes."
+                </p>
               </motion.div>
 
-              {/* Box 3 */}
               <motion.div
                 variants={fadeUpVariants}
                 transition={{ duration: 0.7, ease: "easeOut" }}
-                className="flex items-start gap-4 bg-white p-5 shadow-lg border-l-4 border-l-primary transform -translate-x-2 hover:-translate-y-1 transition-transform duration-300"
+                className="bg-white p-5 shadow-lg border-l-4 border-l-primary hover:-translate-y-1 transition-transform duration-300"
               >
-                <InitialsAvatar initials="VL" bg="bg-amber-500" />
-                <div className="flex-1">
-                  <div className="flex items-baseline gap-3">
-                    <h4 className="font-semibold text-gray-900">Village Leader</h4>
-                    <span className="text-sm text-gray-500">Distribution site</span>
-                  </div>
-                  <p className="mt-1.5 text-gray-700 text-xs lg:text-[16px] leading-relaxed">
-                    "Donors ask for proof. We try our best... but pulling everything together from notes and spreadsheets is
-                    stressful."
-                  </p>
-                </div>
+                <p className="text-gray-700 text-sm lg:text-[16px] leading-relaxed">
+                  "Donors ask for proof. We try our best... but pulling everything together from notes and spreadsheets is
+                  stressful."
+                </p>
               </motion.div>
             </motion.div>
-
-            <p className="lg:hidden text-xs text-gray-400 italic mt-4 max-w-lg">
-              Representative feedback based on common field challenges.
-            </p>
           </div>
         </div>
       </div>
