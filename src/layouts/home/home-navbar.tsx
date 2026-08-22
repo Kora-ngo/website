@@ -1,39 +1,19 @@
+import { Link, useLocation } from 'react-router-dom';
 import { cn } from '../../utils/cn';
 import logo from "../../assets/logo.svg";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const navLinks = [
-  { label: 'Problem', href: '#problem' },
-  { label: 'Solution', href: '#solution' },
-  { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Features', href: '#features' },
-  { label: "Who It's For", href: '#audience' },
-  { label: 'Request Demo', href: '#demo-request' },
+  { label: 'Platform', href: '/platform' },
+  { label: 'Solutions', href: '/solutions' },
+  { label: 'Pricing', href: '/pricing' },
+  { label: 'About', href: '/about' },
+  { label: 'Blog', href: '/blog' },
 ];
 
 const HomeNavbar = () => {
-  const [activeSection, setActiveSection] = useState<string>('');
+  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  // Scroll spy
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.3, rootMargin: '-80px 0px -40% 0px' }
-    );
-
-    document.querySelectorAll('section[id]').forEach((section) => {
-      observer.observe(section);
-    });
-
-    return () => observer.disconnect();
-  }, []);
 
   const handleLinkClick = () => {
     setIsMobileMenuOpen(false);
@@ -46,37 +26,37 @@ const HomeNavbar = () => {
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <div className="shrink-0">
-              <a href="/" className="flex items-center gap-2">
+              <Link to="/" className="flex items-center gap-2">
                 <div className="flex items-center space-x-2">
                   <img src={logo} alt="Kora Logo" className="lg:size-12 size-9" />
                   <p className="lg:text-3xl text-2xl text-primary font-semibold">Kora</p>
                 </div>
-              </a>
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex md:items-center md:gap-8 lg:gap-10">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
                   className={cn(
                     'text-sm font-medium transition-colors',
-                    activeSection === link.href.slice(1)
+                    location.pathname === link.href
                       ? 'text-primary font-semibold underline underline-offset-4'
                       : 'text-gray-700 hover:text-primary'
                   )}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
 
             {/* Desktop CTAs */}
             <div className="hidden md:flex items-center gap-3 sm:gap-4">
-              {/* Request Demo button */}
-              <a
-                href="#demo-request"
+              {/* Request Demo button -> now its own route */}
+              {/* <Link
+                to="/request-demo"
                 className={cn(
                   'group relative inline-flex items-center justify-center overflow-hidden',
                   'px-5 py-2 text-sm font-semibold rounded-xl min-w-35',
@@ -115,7 +95,7 @@ const HomeNavbar = () => {
                     d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"
                   />
                 </svg>
-              </a>
+              </Link> */}
 
               <a
                 href="https://kora.onl/space"
@@ -169,26 +149,26 @@ const HomeNavbar = () => {
           {/* Mobile nav links */}
           <div className="flex flex-col gap-6 text-lg font-medium">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className={cn(
                   'transition-colors py-2',
-                  activeSection === link.href.slice(1)
+                  location.pathname === link.href
                     ? 'text-primary font-semibold'
                     : 'text-gray-700 hover:text-primary'
                 )}
                 onClick={handleLinkClick}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* Mobile CTAs */}
           <div className="mt-auto space-y-4">
-            <a
-              href="#demo-request"
+            {/* <Link
+              to="/request-demo"
               className={cn(
                 'block text-center py-3 px-6 rounded-xl font-semibold',
                 'bg-linear-to-r from-[#747bff] to-[#6366f1]',
@@ -198,7 +178,7 @@ const HomeNavbar = () => {
               onClick={handleLinkClick}
             >
               Request Demo
-            </a>
+            </Link> */}
 
             <a
               href="https://kora.onl/space"
