@@ -11,6 +11,7 @@ import Pricing from './pages/pricing'
 import About from './pages/about'
 import RequestDemo from './pages/request-demo'
 import Blog from './pages/blog'
+import KoraFeild from './pages/kora-field'
 
 export const routes: RouteRecord[] = [
   {
@@ -20,9 +21,10 @@ export const routes: RouteRecord[] = [
     children: [
       { index: true, element: <Home />, entry: 'src/pages/home.tsx' },
       { path: "platform", element: <Platform />, entry: 'src/pages/platform.tsx' },
+      { path: "Kora-Field", element: <KoraFeild />, entry: 'src/pages/kora-field.tsx' },
       { path: "solutions", element: <Solutions /> },
       { path: "pricing", element: <Pricing /> },
-      { path: "about", element: <About /> },
+      { path: "about-us", element: <About /> },
       { path: "request-demo", element: <RequestDemo /> },
       { path: "blog", element: <Blog /> },
 

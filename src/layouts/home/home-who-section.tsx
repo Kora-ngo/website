@@ -14,22 +14,17 @@ const HomeWhoSection = () => {
     {
       title: "Humanitarian NGOs & INGOs",
       description:
-        "International and national organizations delivering food, cash, WASH, health, protection, or emergency assistance at scale particularly in remote, low-connectivity, or conflict-affected regions.",
+        "National and international organizations managing humanitarian and development programs, from beneficiary registration and assistance delivery to monitoring and reportings.",
     },
     {
-      title: "UN Agencies & Cluster Coordinators",
+      title: "Local & Community-Based Organizations",
       description:
-        "UNHCR, WFP, UNICEF, OCHA, WHO, IOM and cluster leads who need consistent, auditable, household-level data across multiple implementing partners and sub-grantees.",
+        "Local NGOs, community organizations, and field teams that need simple, reliable tools for managing beneficiaries and assistance in low-connectivity environments.",
     },
     {
-      title: "Local & Community-Based Organizations (CBOs)",
+      title: "Program & Field Teams",
       description:
-        "Grassroots NGOs, faith-based groups, women's associations, and local responders who manage small-to-medium distributions and need simple, offline-capable tools that don't require constant internet.",
-    },
-    {
-      title: "Donors, Governments & Auditors",
-      description:
-        "Institutional donors, host governments, third-party monitors, and auditors who require transparent, verifiable, exportable impact data with proof and full audit trails.",
+        "Supervisors, enumerators, and program staff who need a shared view of field activities, beneficiary data, assistance, and project progress.",
     },
   ];
 
@@ -59,12 +54,11 @@ const HomeWhoSection = () => {
               </Badge>
 
               <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
-                Built for Every NGO Team <br />
-                Delivering Real Impact
+                Built for Teams Delivering <br /> <span className="text-primary">Humanitarian Assistance</span>
               </h2>
 
               <p className="mt-6 text-xl text-gray-600 max-w-4xl mx-auto">
-                Kora serves organizations and stakeholders who operate in challenging environments and need reliable, auditable aid tracking.
+                From field enumerators to program managers, Kora supports the teams responsible for collecting, managing, validating, and reporting humanitarian program data.
               </p>
             </div>
 

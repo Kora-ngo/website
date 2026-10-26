@@ -3,8 +3,8 @@ import { Outlet, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import ReactGA from 'react-ga4'
 import './App.css'   // ← restored
-import HomeNavbar from './layouts/home/home-navbar'
-import HomeFooter from './layouts/home/home-footer'
+import HomeNavbar from './layouts/common/home-navbar'
+import HomeFooter from './layouts/common/home-footer'
 
 function Layout() {
   const location = useLocation()

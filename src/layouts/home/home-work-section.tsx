@@ -24,24 +24,18 @@ const HomeWorkSection = () => {
       number: "01",
       title: "Set Up Your Project",
       description:
-        "Define the assitances, assign field teams, and configure project periods, all from a simple web dashboard.",
+        "Define project targets, geographic coverage, assistance types, project periods, and field teams from the Kora workspace.",
       icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          className="size-8"
-        >
-          <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
-          <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.085v6.198c0 1.035-.84 1.875-1.875 1.875H15.75a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198c.03-.027.061-.055.091-.085L12 5.432z" />
-        </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-8">
+        <path d="M19.5 21a3 3 0 0 0 3-3v-4.5a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3V18a3 3 0 0 0 3 3h15ZM1.5 10.146V6a3 3 0 0 1 3-3h5.379a2.25 2.25 0 0 1 1.59.659l2.122 2.121c.14.141.331.22.53.22H19.5a3 3 0 0 1 3 3v1.146A4.483 4.483 0 0 0 19.5 9h-15a4.483 4.483 0 0 0-3 1.146Z" />
+      </svg>
       ),
     },
     {
       number: "02",
-      title: "Work Offline in the Field",
+      title: "Collect Data in the Field",
       description:
-        "Field officers use the mobile app with full offline support. Register beneficiaries, record distributions, no internet needed.",
+        "Register households, beneficiaries, and assistance activities, even without internet.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -55,9 +49,9 @@ const HomeWorkSection = () => {
     },
     {
       number: "03",
-      title: "Validate & Sync Automatically",
+      title: "Sync & Validate",
       description:
-        "Once connectivity returns, you can syncs instantly to the central system. Supervisors review, approve or reject.",
+        "When connectivity returns, field data be synced for supervisors to review, approve, or reject submitted records.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -75,9 +69,9 @@ const HomeWorkSection = () => {
     },
     {
       number: "04",
-      title: "Track Impact & Report",
+      title: "Monitor, Analyze & Report",
       description:
-        "Get real-time dashboards, exportable reports, and auditable proof of delivery. Donors and stakeholders see exactly where every resource went.",
+        "Track project progress, assistance, coverage, and validation, then generate reports for teams and donors.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +116,7 @@ const HomeWorkSection = () => {
           </h2>
 
           <p className="mt-6 text-xl text-gray-400 max-w-3xl mx-auto">
-            From project setup to verified delivery, Kora guides your team through every step with offline power and real-time clarity.
+            From project setup to verified assistance, Kora connects field teams, supervisors, and administrators through one structured workflow, online or offline.
           </p>
         </div>
 

@@ -6,6 +6,7 @@ import teamImg from "../../assets/icons/people_skin.png";
 import delImg from "../../assets/icons/inbox.png";
 import syncImg from "../../assets/icons/upload.png";
 import tagImg from "../../assets/icons/tags.png";
+import { Button } from "../../widgets/button";
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 60 },
@@ -29,37 +30,37 @@ const HomeFeatureSection = () => {
       icon: <img src={phoneImg} alt="Offline mobile data collection icon" className="size-14" />,
       title: "Offline-First Tracking",
       description:
-        "Field teams can register beneficiaries and record distributions on their mobile device without an internet connection, then sync data automatically once back online.",
+        "Register beneficiaries and record assistance without an internet connection. Sync when connectivity returns.",
     },
     {
       icon: <img src={dbImg} alt="Centralized beneficiary database icon" className="size-14" />,
       title: "Centralized Beneficiary Management",
       description:
-        "All household data lives in one place, eliminating duplicate registrations and confusion.",
+        "Keep household and beneficiary records organized in one centralized system.",
     },
     {
       icon: <img src={teamImg} alt="Project and field team management icon" className="size-14" />,
       title: "Project & Field Team Management",
       description:
-        "Create projects, assign collaborators and enumerators, and track progress in real-time.",
+        "Create projects, define targets, assign teams, and monitor field activities from one workspace.",
     },
     {
       icon: <img src={delImg} alt="Delivery validation and audit icon" className="size-14" />,
-      title: "Delivery Validation & Audit",
+      title: "Assistance Validation & Audit",
       description:
-        "Every delivery is logged, reviewed, and approved to ensure accountability and transparency.",
+        "Track assistance activities with structured validation and auditable records.",
     },
     {
       icon: <img src={syncImg} alt="Real-time data sync icon" className="size-14" />,
-      title: "Real-Time Sync with Oversight",
+      title: "Offline-to-Central Synchronization",
       description:
-        "Field updates reach collaborators and admins quickly, allowing timely monitoring and reports.",
+        "Synchronize field records with the central platform when connectivity becomes available.",
     },
     {
       icon: <img src={tagImg} alt="Flexible aid type configuration icon" className="size-14" />,
-      title: "Flexible Aid/Assistance Setup",
+      title: "Flexible Assistance Configuration",
       description:
-        "Define different types of assistance (cash, food, medicine) and attach them to specific projects for clear distribution.",
+        "Define assistance types and associate them with specific projects and activities.",
     },
   ];
 
@@ -81,12 +82,12 @@ const HomeFeatureSection = () => {
           </Badge>
 
           <h2 className="mt-6 text-2xl sm:text-5xl lg:text-5xl font-bold tracking-tight">
-            Powerful Tool Built for <br />
+            Built for the Realities of <br />
             <span className="text-primary">Real Humanitarian Work</span>
           </h2>
 
           <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
-            Every feature is designed to solve real field challenges from no connectivity to donor accountability.
+            From offline data collection to donor reporting, Kora is built around the operational challenges faced by humanitarian and field teams.
           </p>
         </div>
 
@@ -110,6 +111,9 @@ const HomeFeatureSection = () => {
             </motion.div>
           ))}
         </motion.div>
+        {/* <div className="flex justify-end py-6">
+          <Button children="Explore the Platform →" variant="link" />
+        </div> */}
       </div>
     </section>
   );

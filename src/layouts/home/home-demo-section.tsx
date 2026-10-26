@@ -75,12 +75,12 @@ const HomeDemoRequestSection = () => {
             Request a Demo
           </Badge>
 
-          <h2 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-            See Kora in Action
+          <h2 className="mt-6 text-4xl sm:text-5xl lg:text-5xl font-bold tracking-tight">
+            See What Kora Could Do for Your Team
           </h2>
 
           <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
-            Book a free 20-minute live demo with our team to explore how Kora can solve your field data challenges.
+            Book a free 20-minute live demo to explore how Kora can help your organization manage beneficiary information, coordinate field activities, and track assistance
           </p>
         </div>
 

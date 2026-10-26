@@ -1,10 +1,26 @@
+import AboutCurrentChapterSection from "../layouts/about/about-current-chapter-section";
+import AboutIntroSection from "../layouts/about/about-intro-section";
+import AboutMissionSection from "../layouts/about/about-mission-section";
+import AboutProblemSection from "../layouts/about/about-problem-section";
+
 const About = () => {
     return (
-        <div className="min-h-screen bg-white flex items-center justify-center px-6 py-40 text-center">
-            <div>
-                <h1 className="text-3xl lg:text-4xl font-semibold text-gray-900">About</h1>
-                <p className="mt-4 text-gray-600">Placeholder page — content coming soon.</p>
-            </div>
+        <div className="min-h-screen bg-white">
+            <section id="intro">
+                <AboutIntroSection />
+            </section>
+
+            <section id="problem">
+                <AboutProblemSection />
+            </section>
+
+            <section id="mission">
+                <AboutMissionSection />
+            </section>
+            
+            <section id="current-chapter">
+                <AboutCurrentChapterSection />
+            </section>
         </div>
      );
 }

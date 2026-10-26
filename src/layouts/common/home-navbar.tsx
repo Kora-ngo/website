@@ -1,14 +1,18 @@
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '../../utils/cn';
 import logo from "../../assets/logo.svg";
+import userLocked from "../../assets/icons/user_locked.png";
 import { useState } from 'react';
 
 const navLinks = [
-  { label: 'Platform', href: '/platform' },
+  // { label: 'Platform', href: '/platform' },
   { label: 'Solutions', href: '/solutions' },
+  { label: 'Kora Field', href: '/kora-field' },
   { label: 'Pricing', href: '/pricing' },
-  { label: 'About', href: '/about' },
   { label: 'Blog', href: '/blog' },
+  { label: 'About Us', href: '/about-us' },
+
+
 ];
 
 const HomeNavbar = () => {
@@ -54,60 +58,42 @@ const HomeNavbar = () => {
 
             {/* Desktop CTAs */}
             <div className="hidden md:flex items-center gap-3 sm:gap-4">
-              {/* Request Demo button -> now its own route */}
-              {/* <Link
+              <Link
                 to="/request-demo"
                 className={cn(
-                  'group relative inline-flex items-center justify-center overflow-hidden',
-                  'px-5 py-2 text-sm font-semibold rounded-xl min-w-35',
-                  'bg-linear-to-r from-[#595bf1] to-[#f163ea]',
-                  'text-white shadow-md shadow-[#747bff]/20',
-                  'from-[#595bf1] to-[#f163ea]',
-                  'hover:shadow-lg hover:shadow-[#747bff]/40 hover:min-w-42.5',
-                  'transition-all duration-400 ease-out'
+                  'inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold transition-all duration-200',
+                  'bg-primary text-white shadow-md shadow-primary/20 hover:bg-primary/90',
+                  'rounded-md',
+                  location.pathname === '/request-demo' && 'ring-2 ring-primary/20'
                 )}
               >
-                <span
-                  className={cn(
-                    'transition-all duration-400 ease-out',
-                    'group-hover:-translate-x-3'
-                  )}
-                >
-                  Request Demo
-                </span>
+                Request a Demo
+              </Link>
 
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className={cn(
-                    'absolute right-4 size-5 text-white/90',
-                    'opacity-0 translate-x-4',
-                    'group-hover:opacity-100 group-hover:translate-x-0',
-                    'transition-all duration-400 ease-out'
-                  )}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"
-                  />
-                </svg>
-              </Link> */}
 
               <a
                 href="https://kora.onl/space"
+                aria-label="Kora Space"
+                title="Kora Space"
                 className={cn(
-                  'px-5 py-2 text-sm font-semibold rounded-xl',
-                  'bg-primary text-white',
-                  'hover:bg-primary/90',
-                  'transition-all duration-200'
+                  'inline-flex items-center justify-center border border-primary/10 bg-white text-primary shadow-sm transition-all duration-200',
+                  'size-11 hover:-translate-y-0.5 hover:shadow-md hover:text-white rounded-md',
+                  // location.pathname === '/space' && 'border-primary text-white shadow-md'
                 )}
               >
-                Get Started
+                 <img src={userLocked} alt="Kora Logo" className="lg:size-5 size-4" />
+                {/* <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.8"
+                  stroke="currentColor"
+                  className="size-5"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 7.5A2.25 2.25 0 0 1 6 5.25h12A2.25 2.25 0 0 1 20.25 7.5v9A2.25 2.25 0 0 1 18 18.75H6A2.25 2.25 0 0 1 3.75 16.5v-9Zm0 0L12 12.75 20.25 7.5" />
+                </svg> */}
               </a>
+
             </div>
 
             {/* Mobile menu toggle */}
@@ -167,26 +153,34 @@ const HomeNavbar = () => {
 
           {/* Mobile CTAs */}
           <div className="mt-auto space-y-4">
-            {/* <Link
-              to="/request-demo"
+            <a
+              href="https://kora.onl/space"
+              aria-label="Go to admin dashboard"
               className={cn(
-                'block text-center py-3 px-6 rounded-xl font-semibold',
-                'bg-linear-to-r from-[#747bff] to-[#6366f1]',
-                'text-white shadow-md hover:shadow-lg hover:shadow-[#747bff]/40',
-                'transition-all duration-300'
+                'inline-flex w-full items-center justify-center border border-primary/10 bg-white p-3 text-primary shadow-sm transition-colors hover:bg-primary hover:text-white',
+                location.pathname === '/request-demo' && 'bg-primary text-white'
               )}
               onClick={handleLinkClick}
             >
-              Request Demo
-            </Link> */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.8"
+                stroke="currentColor"
+                className="size-5"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 7.5A2.25 2.25 0 0 1 6 5.25h12A2.25 2.25 0 0 1 20.25 7.5v9A2.25 2.25 0 0 1 18 18.75H6A2.25 2.25 0 0 1 3.75 16.5v-9Zm0 0L12 12.75 20.25 7.5" />
+              </svg>
+            </a>
 
-            <a
-              href="https://kora.onl/space"
-              className="block text-center py-3 px-6 rounded-xl font-semibold bg-primary text-white hover:bg-primary/90 transition-colors"
+            <Link
+              to="/request-demo"
+              className="block text-center bg-primary px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary/90 rounded-none"
               onClick={handleLinkClick}
             >
-              Get Started
-            </a>
+              Request a Demo
+            </Link>
           </div>
         </div>
       </div>

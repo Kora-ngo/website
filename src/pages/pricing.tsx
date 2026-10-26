@@ -1,10 +1,31 @@
+import CtaRequestDemo from "../layouts/common/genneral-request-demo";
+import PricingIntroSection from "../layouts/pricing/pricing-intro-section";
+import PricingOpportunitySection from "../layouts/pricing/pricing-opportunity-section";
+import PricingProcessSection from "../layouts/pricing/pricing-process-section";
+import PricingWorkingTogetherSection from "../layouts/pricing/pricing-working-together-section";
+
 const Pricing = () => {
     return (
-        <div className="min-h-screen bg-white flex items-center justify-center px-6 py-40 text-center">
-            <div>
-                <h1 className="text-3xl lg:text-4xl font-semibold text-gray-900">Pricing</h1>
-                <p className="mt-4 text-gray-600">Placeholder page — content coming soon.</p>
-            </div>
+        <div className="min-h-screen bg-white">
+            <section id="intro">
+                <PricingIntroSection />
+            </section>
+
+            <section id="opportunity">
+                <PricingOpportunitySection />
+            </section>
+
+            <section id="working-together">
+                <PricingWorkingTogetherSection />
+            </section>
+
+            <section id="process">
+                <PricingProcessSection />
+            </section>
+
+            <section className="mb-10">
+                <CtaRequestDemo />
+            </section>
         </div>
      );
 }

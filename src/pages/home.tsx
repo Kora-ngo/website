@@ -1,8 +1,6 @@
-import HomeDemoRequestSection from "../layouts/home/home-demo-section";
-import HomeDownloadSection from "../layouts/home/home-download-section";
+import CtaRequestDemo from "../layouts/common/genneral-request-demo";
 import HomeFaqSection from "../layouts/home/home-faq-section";
 import HomeFeatureSection from "../layouts/home/home-feature-section";
-import HomeFooter from "../layouts/home/home-footer";
 import HomeHeroSection from "../layouts/home/home-hero-section";
 import HomeProblemSection from "../layouts/home/home-problem-section";
 import HomeSolutionSection from "../layouts/home/home-solution-section";
@@ -38,21 +36,13 @@ const Home = () => {
             <HomeWhoSection />
         </section>
 
-        <section id="demo-request" className="scroll-mt-20">
-            <HomeDemoRequestSection />
-        </section>
-
-        <section id="download">
-            <HomeDownloadSection />
-        </section>
-
         <section id="faq">
             <HomeFaqSection />
         </section>
 
-        {/* <section id="footer">
-            <HomeFooter />
-        </section> */}
+        <section className="py-10">
+            <CtaRequestDemo />
+        </section>
 
         {/* done by Morel Denzel */}
 

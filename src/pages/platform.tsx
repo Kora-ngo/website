@@ -1,21 +1,21 @@
-import HomeFeatureSection from "../layouts/home/home-feature-section";
-import HomeSolutionSection from "../layouts/home/home-solution-section";
-import HomeWorkSection from "../layouts/home/home-work-section";
+import PlatformAdminSection from "../layouts/platfrom/platform-admin-section";
+import PlatformEcosystemSection from "../layouts/platfrom/platform-ecosystem-section";
+import PlatformIntroSection from "../layouts/platfrom/platform-intro-section";
 
 const Platform = () => {
     return (
         <div className="min-h-screen bg-white">
 
-        <section id="solution">
-            <HomeSolutionSection />
+        <section id="intro">
+            <PlatformIntroSection />
         </section>
 
-        <section id="how-it-works">
-            <HomeWorkSection />
+        <section id="ecosystem">
+            <PlatformEcosystemSection />
         </section>
 
-        <section id="features">
-            <HomeFeatureSection />
+        <section id="admin">
+            <PlatformAdminSection />
         </section>
 
         </div>

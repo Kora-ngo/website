@@ -21,43 +21,78 @@ const staggerContainer = {
 
 const faqs = [
   {
-    question: "What is Kora and how does it work for NGOs?",
+    question: "What is Kora and how does it help NGOs?",
     answer:
-      "Kora is a SaaS platform that helps NGOs and humanitarian organizations digitize field operations  from beneficiary registration to aid delivery, through a role-based workflow where every action is tracked, verified, and reportable.",
+      "Kora is a digital field operations platform that helps NGOs and humanitarian organizations manage projects, beneficiaries, assistance delivery, field activities, analytics, and reporting through a connected workflow. It brings field teams, supervisors, and administrators together while keeping operations structured and traceable.",
   },
   {
-    question: "Can Kora be used offline in the field?",
+    question: "Can Kora work without an internet connection?",
     answer:
-      "Yes. Enumerators use the Kora Field mobile app to register beneficiaries and log deliveries with no internet connection. he can later on sync to the central system once connectivity is available.",
+      "Yes. Kora Field is designed for offline field operations. Enumerators can register beneficiaries and record assistance without an active internet connection. When connectivity becomes available, their data can be synchronized with the central Kora platform.",
   },
   {
-    question: "How does beneficiary approval and delivery validation work?",
+    question: "How does Kora ensure beneficiary data and assistance records are reliable?",
     answer:
-      "Enumerators register beneficiaries and submit records for review. A collaborator approves or rejects each submission with written feedback. Once a beneficiary is approved, deliveries tied to them go through the same review process before being confirmed.",
+      "Kora uses a structured workflow where field-collected records can be reviewed and validated by authorized collaborators before becoming validated project data. Activities are also recorded through audit logs, providing greater traceability and accountability across project operations.",
   },
   {
-    question: "What kind of reports can Kora generate for donors?",
+    question: "What can an organization do with the data collected in Kora?",
     answer:
-      "Organisation head can export beneficiary and delivery data as Excel reports for donor reporting, internal review, or audits, with a full activity log behind every record.",
-  },
-  {
-    question: "Is Kora suitable for small or grassroots NGOs, or only large organizations?",
-    answer:
-      "Kora is built to scale both ways, from large INGOs and UN implementing partners managing multiple projects, to grassroots and community-based organizations running smaller distributions who need a simple, offline-capable tool.",
-  },
-  {
-    question: "How is Kora different from paper-based or spreadsheet tracking?",
-    answer:
-      "Paper and spreadsheets create gaps in accountability and make it hard to verify who actually received aid. Kora enforces a structured, role-based review process for every beneficiary and delivery record, producing an auditable trail donors and auditors can rely on.",
+      "Organizations can monitor project progress, beneficiary targets, geographic coverage, assistance delivery, validation activity, and other operational indicators through analytics. They can also generate structured project reports and export beneficiary and assistance data for internal reporting, donor reporting, and accountability purposes.",
   },
 ];
+
+// Floating decorative question marks: varied size/position/depth so the
+// illustration reads as an intentional cluster, not a repeated pattern.
+const floatingMarks = [
+  { size: "text-9xl", top: "8%", left: "12%", opacity: "text-primary/15", duration: 6, delay: 0 },
+  { size: "text-7xl", top: "55%", left: "62%", opacity: "text-primary/25", duration: 5, delay: 0.6 },
+  { size: "text-6xl", top: "70%", left: "18%", opacity: "text-primary/20", duration: 7, delay: 1.2 },
+  { size: "text-8xl", top: "30%", left: "55%", opacity: "text-primary/10", duration: 8, delay: 0.3 },
+  { size: "text-5xl", top: "12%", left: "70%", opacity: "text-primary/30", duration: 4.5, delay: 0.9 },
+];
+
+const FaqIllustration = () => {
+  return (
+    <div className="relative w-full h-full min-h-[420px] flex items-center justify-center overflow-hidden">
+      {floatingMarks.map((mark, i) => (
+        <motion.span
+          key={i}
+          className={`absolute font-black select-none ${mark.size} ${mark.opacity}`}
+          style={{ top: mark.top, left: mark.left }}
+          animate={{
+            y: [0, -18, 0],
+            rotate: [0, 6, 0, -6, 0],
+          }}
+          transition={{
+            duration: mark.duration,
+            delay: mark.delay,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          ?
+        </motion.span>
+      ))}
+
+      {/* Centerpiece mark, larger and slightly more opaque than the rest */}
+      <motion.span
+        className="relative text-primary/40 text-[14rem] font-black select-none leading-none"
+        animate={{ y: [0, -14, 0] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+      >
+        ?
+      </motion.span>
+    </div>
+  );
+};
 
 const HomeFaqSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
     <section className="py-20 bg-gray-50">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <Badge
             variant="primary"
@@ -80,51 +115,66 @@ const HomeFaqSection = () => {
           </p>
         </div>
 
-        <motion.div
-          className="space-y-4"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={staggerContainer}
-        >
-          {faqs.map((item, index) => {
-            const panelId = `faq-panel-${index}`;
-            const isOpen = openIndex === index;
-            return (
-              <motion.div
-                key={index}
-                variants={fadeUpVariants}
-                className="border border-gray-200 rounded-xl overflow-hidden bg-white"
-              >
-                <button
-                  onClick={() => setOpenIndex(isOpen ? null : index)}
-                  aria-expanded={isOpen}
-                  aria-controls={panelId}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
-                >
-                  <h3 className="text-lg font-semibold text-gray-900 pr-4">
-                    {item.question}
-                  </h3>
-                  <span className="text-2xl font-light text-primary shrink-0" aria-hidden="true">
-                    {isOpen ? "−" : "+"}
-                  </span>
-                </button>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left: animated question-mark illustration */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeUpVariants}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="hidden lg:block"
+          >
+            <FaqIllustration />
+          </motion.div>
 
-                <div
-                  id={panelId}
-                  role="region"
-                  className={`px-6 transition-all duration-300 ease-in-out overflow-hidden ${
-                    isOpen ? "max-h-96 pt-1" : "max-h-0"
-                  }`}
+          {/* Right: FAQ accordion, unchanged */}
+          <motion.div
+            className="space-y-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={staggerContainer}
+          >
+            {faqs.map((item, index) => {
+              const panelId = `faq-panel-${index}`;
+              const isOpen = openIndex === index;
+              return (
+                <motion.div
+                  key={index}
+                  variants={fadeUpVariants}
+                  className="border border-gray-200 rounded-xl overflow-hidden bg-white"
                 >
-                  <p className="text-gray-600 pb-5 leading-relaxed">
-                    {item.answer}
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
-        </motion.div>
+                  <button
+                    onClick={() => setOpenIndex(isOpen ? null : index)}
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
+                    className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                  >
+                    <h3 className="text-md font-semibold text-gray-900 pr-4">
+                      {item.question}
+                    </h3>
+                    <span className="text-2xl font-light text-primary shrink-0" aria-hidden="true">
+                      {isOpen ? "−" : "+"}
+                    </span>
+                  </button>
+
+                  <div
+                    id={panelId}
+                    role="region"
+                    className={`px-6 transition-all duration-300 ease-in-out overflow-hidden ${
+                      isOpen ? "max-h-96 pt-1" : "max-h-0"
+                    }`}
+                  >
+                    <p className="text-gray-600 pb-5 leading-relaxed">
+                      {item.answer}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
       </div>
 
       {/* FAQPage structured data — mirrors the content above exactly */}

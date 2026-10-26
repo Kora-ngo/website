@@ -1,5 +1,8 @@
 import Badge from "../../widgets/badge";
 import { motion } from "framer-motion";
+import { Button } from "../../widgets/button";
+import { Link } from "react-router-dom";
+import { cn } from "../../utils/cn";
 
 // Fade-up variants (unchanged)
 const fadeUpVariants = {
@@ -33,19 +36,64 @@ const HomeHeroSection = () => {
           glass
           variant="primary"
         >
-          Impact in Harmony
+          Offline-First Field Operations
         </Badge>
 
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-          The <span className="text-primary">Offline-First</span> Beneficiary <br />{" "}
-          & Aid Tracking Operating System
+          Manage Beneficiaries, Aid & Field Operations, <span className="text-primary">Even Offline</span>
         </h1>
 
         <p className="text-gray-500 text-sm sm:text-xl font-medium max-w-6xl mx-auto px-4 sm:px-0">
-          Kora is a SaaS platform that helps NGOs and humanitarian organizations
-          register beneficiaries, validate aid delivery, and report to donors,
-          all with full offline support built for real-world field conditions.
+              Kora is a digital field operations platform for NGOs and humanitarian organizations to manage projects, 
+              register and validate beneficiaries, track assistance delivery, monitor program performance, and generate reports,
+              even in areas with limited internet connectivity.
         </p>
+
+        <div className="flex justify-center space-x-4">
+            <Link
+                to="/request-demo"
+                className={cn(
+                  'group relative inline-flex items-center justify-center overflow-hidden',
+                  'px-5 py-2 text-sm font-semibold rounded-md min-w-35',
+                  'bg-linear-to-r from-[#595bf1] to-[#f163ea]',
+                  'text-white shadow-md shadow-[#747bff]/20',
+                  'from-[#595bf1] to-[#f163ea]',
+                  'hover:shadow-lg hover:shadow-[#747bff]/40 hover:min-w-42.5',
+                  'transition-all duration-400 ease-out'
+                )}
+              >
+                <span
+                  className={cn(
+                    'transition-all duration-400 ease-out',
+                    'group-hover:-translate-x-3'
+                  )}
+                >
+                  Request a Demo
+                </span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className={cn(
+                    'absolute right-4 size-5 text-white/90',
+                    'opacity-0 translate-x-4',
+                    'group-hover:opacity-100 group-hover:translate-x-0',
+                    'transition-all duration-400 ease-out'
+                  )}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"
+                  />
+                </svg>
+              </Link>
+          <Link to="/solutions"> <Button  children="Explore the Platform" /></Link>
+
+        </div>
       </div>
 
   {/* Images Container */}
