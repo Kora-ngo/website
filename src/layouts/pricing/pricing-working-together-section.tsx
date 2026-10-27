@@ -77,7 +77,7 @@ const PricingWorkingTogetherSection = () => {
 
   return (
     <section className="relative overflow-hidden bg-white py-20 lg:py-28">
-      <div className="pointer-events-none absolute -top-32 -left-32 size-[420px] rounded-full bg-primary/5 blur-3xl" />
+      <div className="pointer-events-none absolute -top-32 -left-32 size-105 rounded-full bg-primary/5 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         {/* Centered intro */}
@@ -129,7 +129,7 @@ const PricingWorkingTogetherSection = () => {
                   <>
                     {/* Desktop: runs from this node's center to the next node's center */}
                     <motion.span
-                      className="pointer-events-none absolute hidden origin-left border-t-2 border-dashed border-primary/30 lg:block lg:left-1/2 lg:top-[calc(1.5rem-1px)] lg:w-[calc(100%+1.5rem)]"
+                      className="pointer-events-none absolute hidden origin-left border-t-2 border-dashed border-primary/30 lg:block lg:left-1/2 lg:top-5.75 lg:w-[calc(100%+1.5rem)]"
                       initial={reduceMotion ? false : { scaleX: 0 }}
                       whileInView={{ scaleX: 1 }}
                       viewport={{ once: true }}
@@ -138,7 +138,7 @@ const PricingWorkingTogetherSection = () => {
                     />
                     {/* Mobile: runs down from this node to the next one */}
                     <motion.span
-                      className="pointer-events-none absolute -bottom-6 left-[calc(1.5rem-1px)] top-12 origin-top border-l-2 border-dashed border-primary/30 lg:hidden"
+                      className="pointer-events-none absolute -bottom-6 left-5.75 top-12 origin-top border-l-2 border-dashed border-primary/30 lg:hidden"
                       initial={reduceMotion ? false : { scaleY: 0 }}
                       whileInView={{ scaleY: 1 }}
                       viewport={{ once: true }}

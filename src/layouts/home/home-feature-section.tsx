@@ -6,7 +6,6 @@ import teamImg from "../../assets/icons/people_skin.png";
 import delImg from "../../assets/icons/inbox.png";
 import syncImg from "../../assets/icons/upload.png";
 import tagImg from "../../assets/icons/tags.png";
-import { Button } from "../../widgets/button";
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 60 },

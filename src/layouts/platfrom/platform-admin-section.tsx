@@ -111,7 +111,7 @@ const PlatformAdminSection = () => {
             ))}
           </svg>
 
-          {callouts.map((c, i) => (
+          {callouts.map((c) => (
             <motion.div
               key={c.label}
               className="absolute z-10 px-3 py-1.5 rounded-full bg-white shadow-md ring-1 ring-black/5 text-xs font-medium text-gray-700 whitespace-nowrap"

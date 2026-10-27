@@ -99,8 +99,8 @@ const GalleryImage = ({
 const AboutProblemSection = () => {
   return (
     <section className="relative isolate overflow-hidden bg-gray-50 py-20 lg:py-28">
-      <div className="pointer-events-none absolute -left-32 top-10 -z-10 size-[420px] rounded-full bg-primary/5 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-40 -right-32 -z-10 size-[460px] rounded-full bg-linear-to-br from-[#595bf1]/10 to-[#f163ea]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-32 top-10 -z-10 size-105 rounded-full bg-primary/5 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 -right-32 -z-10 size-115 rounded-full bg-linear-to-br from-[#595bf1]/10 to-[#f163ea]/10 blur-3xl" />
 
       <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-16">
@@ -149,7 +149,7 @@ const AboutProblemSection = () => {
               <GalleryImage
                 item={gallery[0]}
                 delay={0.1}
-                className="aspect-[16/10] lg:aspect-[3/5]"
+                className="aspect-16/10 lg:aspect-3/5"
               />
             </div>
 
@@ -157,12 +157,12 @@ const AboutProblemSection = () => {
               <GalleryImage
                 item={gallery[1]}
                 delay={0.25}
-                className="aspect-[4/5] lg:aspect-[5/4]"
+                className="aspect-4/5 lg:aspect-5/4"
               />
               <GalleryImage
                 item={gallery[2]}
                 delay={0.4}
-                className="aspect-[4/5] lg:aspect-[5/4]"
+                className="aspect-4/5 lg:aspect-5/4"
               />
             </div>
           </div>

@@ -1,9 +1,17 @@
 import { Link } from 'react-router-dom';
 import logo from "../assets/logo.svg";
+import Seo from '../widgets/seo';
 
 export default function TermsOfService() {
   return (
     <div className="min-h-screen bg-white">
+
+      <Seo
+          title="Terms of Service | Kora"
+          description="....."
+          path="/terms"
+      />
+
       {/* Back button + Logo */}
       <div className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-100">
         <div className="mx-auto max-w-5xl px-6 py-5 flex items-center gap-6">
@@ -28,7 +36,7 @@ export default function TermsOfService() {
 
           <div className="flex-1 flex justify-center">
             <div className="flex items-center gap-3">
-              <div className="flex-shrink-0">
+              <div className="shrink-0">
                 <a href="/" className="flex items-center gap-2">
                   <div className="flex items-center space-x-2">
                     <img src={logo} alt="" className="lg:size-12 size-9" />

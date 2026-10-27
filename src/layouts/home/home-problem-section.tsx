@@ -1,6 +1,5 @@
 // src/layouts/home/home-problem-section.tsx
 import { useCallback, useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
-import { Link } from "react-router-dom";
 import {
   motion,
   useAnimationFrame,

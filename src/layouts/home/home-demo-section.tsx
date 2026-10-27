@@ -1,8 +1,33 @@
+// src/layouts/home/home-demo-section.tsx
 import Badge from "../../widgets/badge";
 import { motion, AnimatePresence } from "framer-motion";
 import { Input } from "../../widgets/input";
 import { Textarea } from "../../widgets/textarea";
 import { useState } from "react";
+
+// What the demo covers. Edit the wording here.
+const topics = [
+  {
+    title: "Offline field data collection",
+    body: "See how beneficiary information can be collected without an active internet connection.",
+  },
+  {
+    title: "Data synchronization",
+    body: "Understand how saved field records can be synchronized with the central platform when connectivity returns.",
+  },
+  {
+    title: "Beneficiary and assistance tracking",
+    body: "Explore how records can be organized, reviewed, and tracked across projects.",
+  },
+  {
+    title: "Reporting and exports",
+    body: "Discover how available data can be exported to support project reporting and accountability.",
+  },
+  {
+    title: "Your organization’s needs",
+    body: "Discuss your field challenges, current workflows, and whether Kora could be a good fit.",
+  },
+];
 
 const HomeDemoRequestSection = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -75,12 +100,12 @@ const HomeDemoRequestSection = () => {
             Request a Demo
           </Badge>
 
-          <h2 className="mt-6 text-4xl sm:text-5xl lg:text-5xl font-bold tracking-tight">
+          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-5xl font-bold tracking-tight">
             See What Kora Could Do for Your Team
-          </h2>
+          </h1>
 
           <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
-            Book a free 20-minute live demo to explore how Kora can help your organization manage beneficiary information, coordinate field activities, and track assistance
+            Book a free 20-minute live demo to explore how Kora can help your organization manage beneficiary information, coordinate field activities, and track assistance.
           </p>
         </div>
 
@@ -95,30 +120,39 @@ const HomeDemoRequestSection = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8 lg:pr-8"
           >
-            <h3 className="text-3xl font-semibold text-gray-900">
-              What you'll discover in the demo
-            </h3>
-            <ul className="space-y-5 text-lg text-gray-700">
-              <li className="flex items-start gap-4">
-                <span className="text-primary text-2xl font-bold mt-1">•</span>
-                <span>Full offline workflow. Register beneficiaries and record deliveries with no internet</span>
-              </li>
-              <li className="flex items-start gap-4">
-                <span className="text-primary text-2xl font-bold mt-1">•</span>
-                <span>Sync triggered when you're ready. Data uploads instantly to the central dashboard</span>
-              </li>
-              <li className="flex items-start gap-4">
-                <span className="text-primary text-2xl font-bold mt-1">•</span>
-                <span>Exportable, auditable reports for donors and auditors</span>
-              </li>
-              <li className="flex items-start gap-4">
-                <span className="text-primary text-2xl font-bold mt-1">•</span>
-                <span>Answers to your specific challenges and use-case questions</span>
-              </li>
+            <h2 className="text-3xl font-semibold text-gray-900">
+              What We’ll Explore Together
+            </h2>
+
+            <ul className="space-y-6">
+              {topics.map((topic) => (
+                <li key={topic.title} className="flex items-start gap-4">
+                  <span
+                    className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-[#595bf1] to-[#f163ea] text-white shadow-sm"
+                    aria-hidden="true"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="size-3.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    </svg>
+                  </span>
+                  <p className="text-lg leading-snug text-gray-600">
+                    <span className="block font-semibold text-gray-900">{topic.title}</span>
+                    <span className="mt-1 block">{topic.body}</span>
+                  </p>
+                </li>
+              ))}
             </ul>
-            <p className="text-gray-600 italic pt-4">
-              Prefer to watch first? We'll also send you a short recorded walkthrough after your submission.
-            </p>
+
+            {/* <p className="text-gray-600 italic pt-4">
+              Not ready for a live demo?{" "}
+              <a
+                href="mailto:hello@kora.onl?subject=Product%20walkthrough%20request"
+                className="font-semibold text-primary not-italic underline underline-offset-4 transition-colors hover:text-primary/80"
+              >
+                Get in touch
+              </a>{" "}
+              and ask us about a short product walkthrough.
+            </p> */}
           </motion.div>
 
           {/* Right – Form card */}
@@ -147,7 +181,7 @@ const HomeDemoRequestSection = () => {
                     </svg>
                   </div>
 
-                  <h3 className="text-2xl font-bold text-gray-900">You're all set!</h3>
+                  <h2 className="text-2xl font-bold text-gray-900">You’re all set!</h2>
 
                   <p className="text-gray-600 text-base max-w-sm leading-relaxed">
                     Your demo request has been received. Our team will reach out within{" "}
@@ -159,7 +193,7 @@ const HomeDemoRequestSection = () => {
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 text-primary">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                       </svg>
-                      A walkthrough will be sent to your email shortly.
+                      We’ll follow up by email.
                     </p>
                   </div>
                 </motion.div>
@@ -168,7 +202,7 @@ const HomeDemoRequestSection = () => {
 
                 /* ── Form ── */
                 <motion.div key="form" initial={{ opacity: 1 }} exit={{ opacity: 0, y: -10 }}>
-                  <h3 className="text-2xl font-semibold mb-8 text-gray-900">Request Your Demo</h3>
+                  <h2 className="text-2xl font-semibold mb-8 text-gray-900">Request Your Demo</h2>
 
                   <form className="space-y-5" onSubmit={handleSubmit}>
 
@@ -264,7 +298,7 @@ const HomeDemoRequestSection = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-3.5">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
                         </svg>
-                        We'll respond within 24–48 hours. Your data is safe with us.
+                        We’ll respond within 24–48 hours. Your data is safe with us.
                       </p>
                     </div>
 

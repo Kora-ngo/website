@@ -73,7 +73,7 @@ const PilotIllustration = () => (
   <div className="relative isolate mx-auto w-full max-w-md lg:ml-auto lg:mr-0">
     <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center">
       <div className="absolute size-80 rounded-full bg-linear-to-br from-[#595bf1]/20 to-[#f163ea]/20 blur-3xl" />
-      <div className="absolute hidden size-[28rem] rounded-full border-2 border-dashed border-primary/10 sm:block" />
+      <div className="absolute hidden size-112 rounded-full border-2 border-dashed border-primary/10 sm:block" />
     </div>
 
     {/* Status chip */}
@@ -129,8 +129,8 @@ const PricingIntroSection = () => {
   return (
     <section className="relative overflow-hidden bg-white pt-32 pb-20 lg:pt-40 lg:pb-28">
       {/* Soft brand-colored wash behind the hero */}
-      <div className="pointer-events-none absolute -top-32 -right-32 size-[520px] rounded-full bg-linear-to-br from-[#595bf1]/10 to-[#f163ea]/10 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-40 -left-32 size-[420px] rounded-full bg-primary/5 blur-3xl" />
+      <div className="pointer-events-none absolute -top-32 -right-32 size-130 rounded-full bg-linear-to-br from-[#595bf1]/10 to-[#f163ea]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 -left-32 size-105 rounded-full bg-primary/5 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
@@ -183,7 +183,7 @@ const PricingIntroSection = () => {
                   "hover:scale-[1.03] hover:shadow-lg hover:shadow-[#747bff]/40",
                   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
                 )}
-              >
+              reloadDocument>
                 Discuss a Pilot with Us
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

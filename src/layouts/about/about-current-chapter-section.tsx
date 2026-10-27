@@ -167,7 +167,7 @@ const LoopIllustration = () => {
   const loops = seen && onScreen && !reduceMotion;
 
   return (
-    <div ref={ref} className="relative mx-auto w-full max-w-[520px]">
+    <div ref={ref} className="relative mx-auto w-full max-w-130">
       {/* Desktop and tablet: the loop */}
       <div
         role="img"
@@ -376,8 +376,8 @@ const AboutCurrentChapterSection = () => {
   return (
     // isolate keeps the negative-z decoration inside this section
     <section className="relative isolate overflow-hidden bg-white py-20 lg:py-28">
-      <div className="pointer-events-none absolute -left-32 top-10 -z-10 size-[420px] rounded-full bg-primary/5 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-40 -right-32 -z-10 size-[460px] rounded-full bg-linear-to-br from-[#595bf1]/10 to-[#f163ea]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-32 top-10 -z-10 size-105 rounded-full bg-primary/5 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 -right-32 -z-10 size-115 rounded-full bg-linear-to-br from-[#595bf1]/10 to-[#f163ea]/10 blur-3xl" />
 
       <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-16">
@@ -444,7 +444,7 @@ const AboutCurrentChapterSection = () => {
                   "hover:scale-[1.03] hover:shadow-lg hover:shadow-[#747bff]/40",
                   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
                 )}
-              >
+              reloadDocument>
                 Discuss a Pilot with Us
                 <Glyph
                   paths={ARROW_RIGHT}
@@ -455,7 +455,7 @@ const AboutCurrentChapterSection = () => {
               <Link
                 to="/pricing"
                 className="inline-flex items-center rounded-xl border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-gray-700 transition-colors hover:border-primary/40 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
-              >
+              reloadDocument>
                 About the pilot program
               </Link>
             </div>

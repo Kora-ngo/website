@@ -5,7 +5,6 @@ import Home from './pages/home'
 import TermsOfService from './pages/terms'
 import PrivacyPolicy from './pages/privacy'
 import NotFound from './pages/not-found'
-import Platform from './pages/platform'
 import Solutions from './pages/solutions'
 import Pricing from './pages/pricing'
 import About from './pages/about'
@@ -20,8 +19,8 @@ export const routes: RouteRecord[] = [
     entry: 'src/Layout.tsx',
     children: [
       { index: true, element: <Home />, entry: 'src/pages/home.tsx' },
-      { path: "platform", element: <Platform />, entry: 'src/pages/platform.tsx' },
-      { path: "Kora-Field", element: <KoraFeild />, entry: 'src/pages/kora-field.tsx' },
+      // { path: "platform", element: <Platform />, entry: 'src/pages/platform.tsx' },
+      { path: "kora-field", element: <KoraFeild />, entry: 'src/pages/kora-field.tsx' },
       { path: "solutions", element: <Solutions /> },
       { path: "pricing", element: <Pricing /> },
       { path: "about-us", element: <About /> },

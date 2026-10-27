@@ -179,7 +179,7 @@ const StructuredIllustration = () => (
     <div className="rounded-xl bg-white p-3.5 shadow-lg ring-1 ring-black/5">
       {/* Stepper: the line fills, the steps check off one after another */}
       <div className="relative flex items-start">
-        <div className="absolute left-[16.667%] right-[16.667%] top-[11px] h-0.5 overflow-hidden rounded-full bg-gray-100">
+        <div className="absolute left-[16.667%] right-[16.667%] top-2.75 h-0.5 overflow-hidden rounded-full bg-gray-100">
           <motion.div
             className="h-full bg-linear-to-r from-[#595bf1] to-[#f163ea]"
             initial={{ width: 0 }}
@@ -485,7 +485,7 @@ const KoraFieldPromiseSection = () => {
               {/* Desktop only: arrow in the gap, same order as the hero steps */}
               {i < promises.length - 1 && (
                 <div
-                  className="pointer-events-none absolute top-32 z-10 hidden size-9 -translate-y-1/2 items-center justify-center rounded-full bg-white text-primary shadow-md ring-1 ring-black/5 lg:-right-[1.875rem] lg:flex"
+                  className="pointer-events-none absolute top-32 z-10 hidden size-9 -translate-y-1/2 items-center justify-center rounded-full bg-white text-primary shadow-md ring-1 ring-black/5 lg:-right-7.5 lg:flex"
                   aria-hidden="true"
                 >
                   <Glyph paths={ARROW_RIGHT} className="size-4" />

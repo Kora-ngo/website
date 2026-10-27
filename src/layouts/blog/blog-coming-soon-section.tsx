@@ -30,10 +30,6 @@ const BULB = [
   "M10 22h4",
 ];
 const BOLT = ["M13 2 3 14h9l-1 8 10-12h-9l1-8Z"];
-const WRENCH = [
-  "M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z",
-];
-const BELL = ["M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9", "M10.3 21a1.94 1.94 0 0 0 3.4 0"];
 const ARROW_RIGHT = ["M5 12h14", "m13 6 6 6-6 6"];
 
 const Glyph = ({ paths, className }: { paths: string[]; className?: string }) => (
@@ -227,7 +223,7 @@ const StatusPanel = () => {
         <Link
           to="/solutions"
           className="group inline-flex items-center gap-2 rounded-xl bg-white/5 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/15 transition-colors duration-300 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
-        >
+        reloadDocument>
           Explore our solutions
           <Glyph
             paths={ARROW_RIGHT}
@@ -257,13 +253,13 @@ const BlogComingSoonSection = () => {
           maskImage: "radial-gradient(ellipse 75% 65% at 50% 30%, black, transparent)",
         }}
       />
-      <div className="pointer-events-none absolute -left-24 top-20 -z-10 size-[420px] rounded-full bg-[#595bf1]/15 blur-3xl" />
-      <div className="pointer-events-none absolute -right-24 top-[55%] -z-10 size-[380px] rounded-full bg-[#f163ea]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-24 top-20 -z-10 size-105 rounded-full bg-[#595bf1]/15 blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 top-[55%] -z-10 size-95 rounded-full bg-[#f163ea]/10 blur-3xl" />
       <img
         src={whiteLogo}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute -right-32 top-24 -z-10 w-[560px] max-w-none select-none opacity-[0.04]"
+        className="pointer-events-none absolute -right-32 top-24 -z-10 w-140 max-w-none select-none opacity-[0.04]"
       />
 
       <div className="relative mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">

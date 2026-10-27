@@ -6,11 +6,17 @@ import HomeProblemSection from "../layouts/home/home-problem-section";
 import HomeSolutionSection from "../layouts/home/home-solution-section";
 import HomeWhoSection from "../layouts/home/home-who-section";
 import HomeWorkSection from "../layouts/home/home-work-section";
+import Seo from "../widgets/seo";
 
 const Home = () => {
     return ( 
         <div className="min-h-screen bg-white">
 
+        <Seo
+          title="Kora | NGO Beneficiary Management & Aid Tracking Software"
+          description="Kora helps NGOs and humanitarian organizations register beneficiaries, track aid delivery, and manage field operations, even offline."
+          path="/"
+        />
 
         <section id="hero">
             <HomeHeroSection />

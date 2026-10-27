@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /space
 
 Sitemap: https://kora.onl/sitemap.xml

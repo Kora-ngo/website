@@ -84,8 +84,8 @@ const PricingProcessSection = () => {
 
   return (
     <section className="relative overflow-hidden bg-gray-50 py-20 lg:py-28">
-      <div className="pointer-events-none absolute -bottom-40 -right-32 size-[460px] rounded-full bg-linear-to-br from-[#595bf1]/10 to-[#f163ea]/10 blur-3xl" />
-      <div className="pointer-events-none absolute -top-32 -left-32 size-[380px] rounded-full bg-primary/5 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 -right-32 size-115 rounded-full bg-linear-to-br from-[#595bf1]/10 to-[#f163ea]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -top-32 -left-32 size-95 rounded-full bg-primary/5 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         {/* Centered intro */}

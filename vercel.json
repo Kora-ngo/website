@@ -1,4 +1,5 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     {
       "source": "/space/:path*",
@@ -7,10 +8,6 @@
     {
       "source": "/space",
       "destination": "https://kora-space.vercel.app"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ]
 }

@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import Badge from "../../widgets/badge";
 import whiteLogo from "../../assets/icons/white_logo.png";
-import { cn } from "../../utils/cn";
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -173,8 +172,8 @@ const SolutionsDifferenceSection = () => {
   return (
     // isolate keeps the negative-z decoration inside this section
     <section className="relative isolate overflow-hidden bg-white py-20 lg:py-28">
-      <div className="pointer-events-none absolute -left-32 top-24 -z-10 size-[420px] rounded-full bg-primary/5 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-40 -right-32 -z-10 size-[460px] rounded-full bg-linear-to-br from-[#595bf1]/10 to-[#f163ea]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-32 top-24 -z-10 size-105 rounded-full bg-primary/5 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 -right-32 -z-10 size-115 rounded-full bg-linear-to-br from-[#595bf1]/10 to-[#f163ea]/10 blur-3xl" />
 
       <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         {/* Centered intro */}
@@ -251,7 +250,7 @@ const SolutionsDifferenceSection = () => {
             {/* Desktop only: tinted panel behind the "With Kora" column */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-y-0 right-0 hidden w-[calc(50%-2rem)] bg-linear-to-b from-primary/[0.07] to-[#f163ea]/[0.06] md:block"
+              className="pointer-events-none absolute inset-y-0 right-0 hidden w-[calc(50%-2rem)] bg-linear-to-b from-primary/[0.07] to-[#f163ea]/6 md:block"
             />
 
             {/* Desktop only: dashed line down the middle that draws itself in */}

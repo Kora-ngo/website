@@ -141,7 +141,7 @@ const StepRow = ({ step, index, total }: { step: Step; index: number; total: num
       >
         <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center">
           <div className="absolute size-72 rounded-full bg-linear-to-br from-[#595bf1]/20 to-[#f163ea]/20 blur-3xl" />
-          <div className="absolute hidden size-[22rem] rounded-full border-2 border-dashed border-primary/10 sm:block" />
+          <div className="absolute hidden size-88 rounded-full border-2 border-dashed border-primary/10 sm:block" />
         </div>
 
         <motion.div

@@ -5,10 +5,17 @@ import SolutionsDifferenceSection from "../layouts/solution/solutions-difference
 import SolutionsIntegrationsSection from "../layouts/solution/solutions-integrations-section";
 import SolutionsOfflineSection from "../layouts/solution/solutions-offline-section";
 import SolutionsReportingSection from "../layouts/solution/solutions-reporting-section";
+import Seo from "../widgets/seo";
 
 const Solutions = () => {
     return (
         <div className="min-h-screen bg-white">
+
+            <Seo
+                title="Beneficiary & Aid Delivery Management for NGOs | Kora"
+                description="Manage beneficiaries, collect field data offline, track assistance delivery, and report to donors with Kora’s solutions for NGOs."
+                path="/solutions"
+            />
 
             <section id="intro">
                 <SolutionIntro />

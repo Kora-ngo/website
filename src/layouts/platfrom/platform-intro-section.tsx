@@ -8,49 +8,6 @@ const fadeUpVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-// Three connected nodes, arranged around the center hub.
-// Positions are in % relative to the diagram container (top-left origin).
-const nodes = [
-  {
-    label: "Kora Admin",
-    sub: "Web",
-    top: "6%",
-    left: "50%",
-    color: "from-blue-500 to-blue-600",
-    delay: 0.3,
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
-        <path fillRule="evenodd" d="M2.25 5.25a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3V15a3 3 0 0 1-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 0 1-.53 1.28h-9a.75.75 0 0 1-.53-1.28l.621-.622a2.25 2.25 0 0 0 .659-1.59V18h-3a3 3 0 0 1-3-3V5.25Zm1.5 0v9.75c0 .414.336.75.75.75h13.5a.75.75 0 0 0 .75-.75V5.25a.75.75 0 0 0-.75-.75H4.5a.75.75 0 0 0-.75.75Z" clipRule="evenodd" />
-      </svg>
-    ),
-  },
-  {
-    label: "Kora Collaborator",
-    sub: "Web",
-    top: "68%",
-    left: "14%",
-    color: "from-purple-500 to-purple-600",
-    delay: 0.45,
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
-        <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0 1 12 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 0 1 3.498 1.307 4.491 4.491 0 0 1 1.307 3.497A4.49 4.49 0 0 1 21.75 12a4.49 4.49 0 0 1-1.549 3.397 4.491 4.491 0 0 1-1.307 3.497 4.491 4.491 0 0 1-3.497 1.307A4.49 4.49 0 0 1 12 21.75a4.49 4.49 0 0 1-3.397-1.549 4.49 4.49 0 0 1-3.498-1.306 4.491 4.491 0 0 1-1.307-3.498A4.49 4.49 0 0 1 2.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 0 1 1.307-3.497 4.49 4.49 0 0 1 3.497-1.307Zm7.007 6.387a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
-      </svg>
-    ),
-  },
-  {
-    label: "Kora Field",
-    sub: "Mobile",
-    top: "68%",
-    left: "86%",
-    color: "from-yellow-500 to-yellow-600",
-    delay: 0.6,
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
-        <path fillRule="evenodd" d="M10.5 1.875a1.125 1.125 0 0 0-1.125 1.125v.375H7.5A2.25 2.25 0 0 0 5.25 5.625v14.25a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25V5.625a2.25 2.25 0 0 0-2.25-2.25h-1.875V3a1.125 1.125 0 0 0-1.125-1.125h-3ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" clipRule="evenodd" />
-      </svg>
-    ),
-  },
-];
 
 
 
@@ -74,7 +31,7 @@ const PlatformDashboardPreview = () => {
   }, []);
 
   return (
-    <div className="relative w-full max-w-xl mx-auto aspect-[5/4] flex items-center justify-center">
+    <div className="relative w-full max-w-xl mx-auto aspect-5/4 flex items-center justify-center">
       {/* Soft ambient glow */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="h-[70%] w-[70%] rounded-full bg-primary/20 blur-3xl" />
@@ -110,7 +67,7 @@ const PlatformDashboardPreview = () => {
         </div>
 
         {/* Content area with loading → real content */}
-        <div className="p-4 relative min-h-[220px]">
+        <div className="p-4 relative min-h-55">
           <AnimatePresence mode="wait">
             {!loaded ? (
               /* ── Loading skeleton ── */

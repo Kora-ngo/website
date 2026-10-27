@@ -90,7 +90,7 @@ const Background = ({ animated }: { animated: boolean }) => (
     {/* Dashed rings turning in opposite directions, each carrying a small orbiting dot */}
     <div className="absolute inset-0 flex items-center justify-center">
       <motion.div
-        className="absolute size-[560px] rounded-full border-2 border-dashed border-primary/10 sm:size-[760px] lg:size-[900px]"
+        className="absolute size-140 rounded-full border-2 border-dashed border-primary/10 sm:size-190 lg:size-225"
         animate={{ rotate: animated ? 360 : 0 }}
         transition={animated ? { duration: 90, repeat: Infinity, ease: "linear" } : { duration: 0 }}
       >
@@ -98,7 +98,7 @@ const Background = ({ animated }: { animated: boolean }) => (
       </motion.div>
 
       <motion.div
-        className="absolute size-[380px] rounded-full border border-dashed border-[#f163ea]/20 sm:size-[520px] lg:size-[620px]"
+        className="absolute size-95 rounded-full border border-dashed border-[#f163ea]/20 sm:size-130 lg:size-155"
         animate={{ rotate: animated ? -360 : 0 }}
         transition={animated ? { duration: 70, repeat: Infinity, ease: "linear" } : { duration: 0 }}
       >

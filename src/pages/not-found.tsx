@@ -1,12 +1,21 @@
 import { Link } from 'react-router-dom';
+import Seo from '../widgets/seo';
 
 export default function NotFound() {
   return (
     <div className="relative min-h-screen bg-white flex flex-col items-center justify-center px-6 text-center overflow-hidden">
+
+      <Seo
+        title="Oups.."
+        description="Page Not Found."
+        path="/404"
+        noindex
+      />
+
       {/* Animated glowing background – round & moving */}
       <div className="absolute inset-0 pointer-events-none z-0 hidden md:block">
         <div
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vw] max-w-[1400px] max-h-[1400px] rounded-full"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vw] max-w-350 max-h-350 rounded-full"
           style={{
             background: 'radial-gradient(circle at 50% 50%, rgba(116,123,255,0.35) 0%, rgba(116,123,255,0.12) 40%, transparent 70%)',
             filter: 'blur(120px)',

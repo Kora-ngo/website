@@ -49,7 +49,7 @@ const HomeHeroSection = () => {
               even in areas with limited internet connectivity.
         </p>
 
-        <div className="flex justify-center space-x-4">
+        <div className="hidden sm:flex items-center justify-center gap-4">
             <Link
                 to="/request-demo"
                 className={cn(
@@ -61,7 +61,7 @@ const HomeHeroSection = () => {
                   'hover:shadow-lg hover:shadow-[#747bff]/40 hover:min-w-42.5',
                   'transition-all duration-400 ease-out'
                 )}
-              >
+              reloadDocument>
                 <span
                   className={cn(
                     'transition-all duration-400 ease-out',
@@ -91,7 +91,7 @@ const HomeHeroSection = () => {
                   />
                 </svg>
               </Link>
-          <Link to="/solutions"> <Button  children="Explore the Platform" /></Link>
+          <Link to="/solutions" reloadDocument> <Button  children="Explore our solutions" /></Link>
 
         </div>
       </div>

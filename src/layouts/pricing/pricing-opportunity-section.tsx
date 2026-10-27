@@ -64,7 +64,7 @@ const areas = [
 const PricingOpportunitySection = () => {
   return (
     <section className="relative overflow-hidden bg-gray-50 py-20 lg:py-28">
-      <div className="pointer-events-none absolute -bottom-40 -right-32 size-[460px] rounded-full bg-linear-to-br from-[#595bf1]/10 to-[#f163ea]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 -right-32 size-115 rounded-full bg-linear-to-br from-[#595bf1]/10 to-[#f163ea]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-16">

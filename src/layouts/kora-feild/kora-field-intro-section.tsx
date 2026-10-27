@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Badge from "../../widgets/badge";
 import { cn } from "../../utils/cn";
@@ -45,8 +44,8 @@ const KoraFieldIntroSection = () => {
   return (
     <section className="relative overflow-hidden bg-white pt-32 pb-20 lg:pt-40 lg:pb-28">
       {/* Soft brand-colored wash behind the hero */}
-      <div className="pointer-events-none absolute -top-32 -right-32 size-[520px] rounded-full bg-linear-to-br from-[#595bf1]/10 to-[#f163ea]/10 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-40 -left-32 size-[420px] rounded-full bg-primary/5 blur-3xl" />
+      <div className="pointer-events-none absolute -top-32 -right-32 size-130 rounded-full bg-linear-to-br from-[#595bf1]/10 to-[#f163ea]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 -left-32 size-105 rounded-full bg-primary/5 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">

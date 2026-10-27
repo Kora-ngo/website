@@ -28,7 +28,7 @@ const productLinks: LinkItem[] = [
 
 const companyLinks: LinkItem[] = [
   { label: "Pilot Program", to: "/pricing" },
-  { label: "About", to: "/about" },
+  { label: "About", to: "/about-us" },
   { label: "Blog", to: "/blog" },
   { label: "Request a Demo", to: "/request-demo" },
 ];
@@ -82,7 +82,7 @@ const FooterLink = ({ to, children }: { to: string; children: ReactNode }) => (
   <Link
     to={to}
     className="group inline-flex items-center gap-1.5 text-[15px] text-gray-400 transition-colors duration-200 hover:text-white"
-  >
+  reloadDocument>
     <span className="relative">
       {children}
       <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-linear-to-r from-[#595bf1] to-[#f163ea] transition-all duration-300 group-hover:w-full" />
@@ -139,8 +139,8 @@ const HomeFooter = () => {
       />
 
       {/* Brand-colored glows */}
-      <div className="pointer-events-none absolute -left-24 top-24 -z-10 size-[420px] rounded-full bg-[#595bf1]/15 blur-3xl" />
-      <div className="pointer-events-none absolute -right-24 bottom-40 -z-10 size-[380px] rounded-full bg-[#f163ea]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-24 top-24 -z-10 size-105 rounded-full bg-[#595bf1]/15 blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 bottom-40 -z-10 size-95 rounded-full bg-[#f163ea]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-6 pt-16 lg:px-8 lg:pt-20">
         <motion.div
@@ -156,7 +156,7 @@ const HomeFooter = () => {
             transition={itemTransition}
             className="col-span-2 space-y-6 lg:col-span-4"
           >
-            <Link to="/" className="inline-flex items-center gap-2.5">
+            <Link to="/" className="inline-flex items-center gap-2.5" reloadDocument>
               <img
                 src="https://res.cloudinary.com/doqholno8/image/upload/v1771016666/white_logo_cbf8ki.png"
                 alt=""
@@ -172,7 +172,7 @@ const HomeFooter = () => {
             <Link
               to="/pricing"
               className="inline-flex items-center gap-2.5 rounded-full bg-white/5 py-1.5 pl-3 pr-4 text-xs ring-1 ring-white/10 transition-colors duration-300 hover:bg-white/10"
-            >
+            reloadDocument>
               <span className="relative flex size-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75 motion-reduce:animate-none" />
                 <span className="relative inline-flex size-2 rounded-full bg-primary" />
@@ -225,7 +225,7 @@ const HomeFooter = () => {
 
           <div className="flex items-center gap-6">
             {legalLinks.map((link) => (
-              <Link key={link.to} to={link.to} className="transition-colors duration-200 hover:text-white">
+              <Link key={link.to} to={link.to} className="transition-colors duration-200 hover:text-white" reloadDocument>
                 {link.label}
               </Link>
             ))}

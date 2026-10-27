@@ -30,7 +30,7 @@ const HomeNavbar = () => {
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <div className="shrink-0">
-              <Link to="/" className="flex items-center gap-2">
+              <Link to="/" className="flex items-center gap-2" reloadDocument>
                 <div className="flex items-center space-x-2">
                   <img src={logo} alt="Kora Logo" className="lg:size-12 size-9" />
                   <p className="lg:text-3xl text-2xl text-primary font-semibold">Kora</p>
@@ -50,7 +50,7 @@ const HomeNavbar = () => {
                       ? 'text-primary font-semibold underline underline-offset-4'
                       : 'text-gray-700 hover:text-primary'
                   )}
-                >
+                reloadDocument>
                   {link.label}
                 </Link>
               ))}
@@ -66,7 +66,7 @@ const HomeNavbar = () => {
                   'rounded-md',
                   location.pathname === '/request-demo' && 'ring-2 ring-primary/20'
                 )}
-              >
+              reloadDocument>
                 Request a Demo
               </Link>
 
@@ -82,16 +82,6 @@ const HomeNavbar = () => {
                 )}
               >
                  <img src={userLocked} alt="Kora Logo" className="lg:size-5 size-4" />
-                {/* <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.8"
-                  stroke="currentColor"
-                  className="size-5"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 7.5A2.25 2.25 0 0 1 6 5.25h12A2.25 2.25 0 0 1 20.25 7.5v9A2.25 2.25 0 0 1 18 18.75H6A2.25 2.25 0 0 1 3.75 16.5v-9Zm0 0L12 12.75 20.25 7.5" />
-                </svg> */}
               </a>
 
             </div>
@@ -145,42 +135,40 @@ const HomeNavbar = () => {
                     : 'text-gray-700 hover:text-primary'
                 )}
                 onClick={handleLinkClick}
-              >
+              reloadDocument>
                 {link.label}
               </Link>
             ))}
           </div>
 
           {/* Mobile CTAs */}
-          <div className="mt-auto space-y-4">
+          <div className="mt-auto space-y-3">
+            <Link
+              to="/request-demo"
+              className={cn(
+                "flex w-full items-center justify-center px-5 py-2.5 text-sm font-semibold transition-all duration-200",
+                "bg-primary text-white shadow-md shadow-primary/20 hover:bg-primary/90",
+                "rounded-md",
+                location.pathname === "/request-demo" && "ring-2 ring-primary/20"
+              )}
+              onClick={handleLinkClick}
+            reloadDocument>
+              Request a Demo
+            </Link>
+
             <a
               href="https://kora.onl/space"
-              aria-label="Go to admin dashboard"
+              aria-label="Kora Space"
+              title="Kora Space"
               className={cn(
-                'inline-flex w-full items-center justify-center border border-primary/10 bg-white p-3 text-primary shadow-sm transition-colors hover:bg-primary hover:text-white',
-                location.pathname === '/request-demo' && 'bg-primary text-white'
+                "inline-flex w-full items-center justify-center gap-2 border border-primary/10 bg-white text-primary shadow-sm transition-all duration-200",
+                "px-5 py-2.5 rounded-md hover:shadow-md"
               )}
               onClick={handleLinkClick}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.8"
-                stroke="currentColor"
-                className="size-5"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 7.5A2.25 2.25 0 0 1 6 5.25h12A2.25 2.25 0 0 1 20.25 7.5v9A2.25 2.25 0 0 1 18 18.75H6A2.25 2.25 0 0 1 3.75 16.5v-9Zm0 0L12 12.75 20.25 7.5" />
-              </svg>
+              <img src={userLocked} alt="" className="size-5" />
+              <span className="text-sm font-semibold">Kora Space</span>
             </a>
-
-            <Link
-              to="/request-demo"
-              className="block text-center bg-primary px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary/90 rounded-none"
-              onClick={handleLinkClick}
-            >
-              Request a Demo
-            </Link>
           </div>
         </div>
       </div>

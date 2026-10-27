@@ -248,7 +248,7 @@ const ToolNode = ({ tool }: { tool: Tool }) => (
       viewport={{ once: true, amount: 0.3 }}
       transition={{ type: "spring", stiffness: 200, damping: 16, delay: tool.delay }}
     >
-      <div className="flex size-16 items-center justify-center rounded-2xl bg-white shadow-xl ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-2xl xl:size-[4.5rem]">
+      <div className="flex size-16 items-center justify-center rounded-2xl bg-white shadow-xl ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-2xl xl:size-18">
         <span
           className={cn(
             "flex size-11 items-center justify-center rounded-xl bg-linear-to-br text-white shadow-sm xl:size-12",
@@ -276,7 +276,7 @@ const IntegrationsDiagram = () => {
 
   return (
     // isolate keeps the negative-z glow inside this block
-    <div ref={ref} className="relative isolate hidden aspect-[1200/460] w-full lg:block">
+    <div ref={ref} className="relative isolate hidden aspect-1200/460 w-full lg:block">
       <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-2/3 w-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-linear-to-br from-[#595bf1]/20 to-[#f163ea]/20 blur-3xl" />
 
       <svg viewBox={`0 0 ${W} ${H}`} className="absolute inset-0 size-full" aria-hidden="true">
@@ -432,7 +432,7 @@ const SolutionsIntegrationsSection = () => {
                 "hover:scale-[1.03] hover:shadow-lg hover:shadow-[#747bff]/40",
                 "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
               )}
-            >
+            reloadDocument>
               Discuss Your Needs
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -450,7 +450,7 @@ const SolutionsIntegrationsSection = () => {
       </div>
 
       {/* Full-width illustration */}
-      <div className="mx-auto mt-14 w-full max-w-[1400px] px-4 sm:px-6 lg:mt-20 lg:px-8">
+      <div className="mx-auto mt-14 w-full max-w-350 px-4 sm:px-6 lg:mt-20 lg:px-8">
         <IntegrationsDiagram />
         <IntegrationsStacked />
       </div>

@@ -1,7 +1,6 @@
 // src/layouts/solutions/solutions-reporting-section.tsx
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { animate, motion, useInView, useReducedMotion } from "framer-motion";
-import Badge from "../../widgets/badge";
 import { cn } from "../../utils/cn";
 
 const fadeUpVariants = {

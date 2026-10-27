@@ -1,7 +1,6 @@
 // src/layouts/solutions/solutions-offline-section.tsx
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
-import Badge from "../../widgets/badge";
 import logo from "../../assets/logo.svg";
 import { cn } from "../../utils/cn";
 import { Button } from "../../widgets/button";
@@ -528,7 +527,7 @@ const SolutionsOfflineSection = () => {
                 </motion.li>
               ))}
             </motion.ul>
-              <Link to="/kora-field"><Button children="Discover Kora Field →" variant="link" /></Link>
+              <Link to="/kora-field" reloadDocument><Button children="Discover Kora Field →" variant="link" /></Link>
           </div>
 
           {/* Right: phone + floating sync cards */}

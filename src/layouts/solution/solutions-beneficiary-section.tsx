@@ -1,7 +1,6 @@
 // src/layouts/solutions/solutions-beneficiary-section.tsx
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { animate, motion, useInView, useReducedMotion } from "framer-motion";
-import Badge from "../../widgets/badge";
 import logo from "../../assets/logo.svg";
 import { cn } from "../../utils/cn";
 
@@ -78,7 +77,7 @@ const NavItem = ({ label, active = false }: { label: string; active?: boolean })
       active ? "bg-primary/10 text-primary" : "text-gray-500"
     )}
   >
-    <span className={cn("size-3.5 rounded-[4px]", active ? "bg-primary" : "bg-gray-200")} />
+    <span className={cn("size-3.5 rounded-lg", active ? "bg-primary" : "bg-gray-200")} />
     {label}
   </div>
 );
@@ -300,7 +299,6 @@ const FloatingChartCard = ({
   className,
   from,
   delay,
-  floatDuration,
   children,
 }: FloatingChartCardProps) => {
   const reduceMotion = useReducedMotion();

@@ -2,7 +2,6 @@
 import { useId, useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import Badge from "../../widgets/badge";
-import { cn } from "../../utils/cn";
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -252,7 +251,7 @@ const AfricaMap = () => {
       ref={ref}
       role="img"
       aria-label="Illustrative map of Africa with field locations connected into one network"
-      className="relative mx-auto w-full max-w-xl lg:max-w-[600px]"
+      className="relative mx-auto w-full max-w-xl lg:max-w-150"
     >
       <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center">
         <div className="size-3/4 rounded-full bg-linear-to-br from-[#595bf1]/20 to-[#f163ea]/15 blur-3xl" />
@@ -463,8 +462,8 @@ const AboutMissionSection = () => {
   return (
     // isolate keeps the negative-z decoration inside this section
     <section className="relative isolate overflow-hidden bg-gray-950 py-20 lg:py-28">
-      <div className="pointer-events-none absolute -left-32 top-10 -z-10 size-[420px] rounded-full bg-[#595bf1]/10 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-40 -right-32 -z-10 size-[460px] rounded-full bg-[#f163ea]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-32 top-10 -z-10 size-105 rounded-full bg-[#595bf1]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 -right-32 -z-10 size-115 rounded-full bg-[#f163ea]/10 blur-3xl" />
 
       <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">

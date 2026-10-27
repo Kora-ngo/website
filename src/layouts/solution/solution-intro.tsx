@@ -75,7 +75,7 @@ const floatingCards: FloatingCard[] = [
   },
 ];
 
-const FloatingInfoCard = ({ card, index }: { card: FloatingCard; index: number }) => {
+const FloatingInfoCard = ({ card }: { card: FloatingCard; index: number }) => {
   const reduceMotion = useReducedMotion();
 
   return (
@@ -153,8 +153,8 @@ const SolutionsIntroSection = () => {
   return (
     <section className="relative overflow-hidden bg-white pt-32 pb-20 lg:pt-40 lg:pb-28">
       {/* Soft brand-colored wash behind the whole hero */}
-      <div className="pointer-events-none absolute -top-32 -right-32 size-[520px] rounded-full bg-linear-to-br from-[#595bf1]/10 to-[#f163ea]/10 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-40 -left-32 size-[420px] rounded-full bg-primary/5 blur-3xl" />
+      <div className="pointer-events-none absolute -top-32 -right-32 size-130 rounded-full bg-linear-to-br from-[#595bf1]/10 to-[#f163ea]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 -left-32 size-105 rounded-full bg-primary/5 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -202,7 +202,7 @@ const SolutionsIntroSection = () => {
                   "hover:shadow-lg hover:shadow-[#747bff]/40 hover:scale-[1.03]",
                   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
                 )}
-              >
+              reloadDocument>
                 Request a Demo
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="size-4 transition-transform duration-300 group-hover:translate-x-1">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />

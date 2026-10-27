@@ -1,7 +1,6 @@
 // src/widgets/cta-request-demo.tsx
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
-import whiteLogo from "../../assets/icons/white_logo.png";
 import box from "../../assets/icons/box.svg";
 import { cn } from "../../utils/cn";
 
@@ -177,7 +176,7 @@ const ModuleCard = ({ module: m, index }: { module: Module; index: number }) => 
 const BoxIllustration = () => (
   <motion.div
     className={cn(
-      "relative mx-auto mt-6 aspect-[5/6] w-64",
+      "relative mx-auto mt-6 aspect-5/6 w-64",
       // From md up the illustration is pinned to the card's bottom-right and
       // rises above its top edge.
       "md:absolute md:right-8 md:bottom-0 md:mx-0 md:mt-0 md:w-80 lg:right-12",
@@ -260,7 +259,7 @@ const CtaRequestDemo = ({
               "hover:scale-105 hover:shadow-2xl",
               "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
             )}
-          >
+          reloadDocument>
             <span>Let's Talk</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
